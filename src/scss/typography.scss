@@ -14,38 +14,19 @@
 --------------------------------------------------------------*/
 
 @font-face {
-  font-family: 'Effra';
-  src: url('../fonts/Effra.eot');
-  src: local('../fonts/Effra'),
-  url('../fonts/Effra.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Effra.woff2') format('woff2'),
-  url('../fonts/Effra.woff') format('woff'),
-  url('../fonts/Effra.ttf') format('truetype');
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf');
+  src: local('../fonts/Montserrat-Regular.ttf'), local('Montserrat-Regular'),
+  url('../fonts/Montserrat-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Effra-Bold';
-  src: url('../fonts/Effra-Bold.eot');
-  src: local('../fonts/Effra Bold'), local('Effra-Bold'),
-  url('../fonts/Effra-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Effra-Bold.woff2') format('woff2'),
-  url('../fonts/Effra-Bold.woff') format('woff'),
-  url('../fonts/Effra-Bold.ttf') format('truetype');
+  font-family: 'Montserrat-Bold';
+  src: local('../fonts/Montserrat-Bold'), local('Montserrat-Bold'),
+  url('../fonts/Montserrat-Bold.ttf') format('truetype');
   font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Effra-Medium';
-  src: url('../fonts/Effra-Medium.eot');
-  src: local('../fonts/Effra Medium'), local('Effra-Medium'),
-  url('../fonts/Effra-Medium.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Effra-Medium.woff2') format('woff2'),
-  url('../fonts/Effra-Medium.woff') format('woff'),
-  url('../fonts/Effra-Medium.ttf') format('truetype');
-  font-weight: 500;
   font-style: normal;
 }
 
@@ -60,8 +41,8 @@ html, body {
   height: 100%;
   min-width: 100%;
   min-height: 100%;
-  color: $basic-color-black;
-  font-family: 'Effra-Medium', 'Arial', sans-serif;
+  color: $basic-color-dark;
+  font-family: 'Montserrat', 'Arial', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -80,7 +61,7 @@ h4,
 h5,
 h6 {
   font-size: 1em;
-  font-family: 'Effra-Bold', 'Arial', sans-serif;
+  font-family: 'Montserrat-Bold', 'Arial', sans-serif;
   font-weight: bold;
   font-style: normal;
   text-align: center;

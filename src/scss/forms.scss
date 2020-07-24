@@ -50,7 +50,7 @@
     }
     &__label {
       width: 100%;
-      color: $basic-color-black;
+      color: $basic-color-dark;
     }
     &__input {
       width: 100%;
@@ -61,8 +61,8 @@
       width: 100%;
       margin: 1em auto;
       &:hover {
-        color: $basic-color-pink;
-        border-color: $basic-color-pink;
+        color: $basic-color-coral;
+        border-color: $basic-color-coral;
       }
     }
     .btn-close {

@@ -15,9 +15,14 @@
 <body>
 
 <header id="top" class="header">
-    <div class="container flex-wrap container--header">
-      <a class="logo-box header__logo-box">
-        <img src="assets/img/logo.svg" alt="">
+    <div class="container">
+      <span class="btn-small btn-small--menu">
+        menu
+      </span>
+      <a href="#" class="logo-box header__logo-box">
+        <h1>
+          compressor-mash.ru
+        </h1>
       </a>
         <div class="search-box">
             <form class="search-form" action="">
@@ -44,12 +49,16 @@
         </div>
     </div>
 
-    <div class="menu-btn">
-        <input type="checkbox"/>
-        <span class="line--first"></span>
-        <span class="line--second"></span>
-        <span class="line--third"></span>
-    </div>
+    <label class="checkbox">
+        <input class="input checkbox__input visually-hidden" name="Customer_delivery" type="checkbox">
+        <span class="checkbox__check"></span>
+        Самостоятельно привезу груз на склад
+    </label>
+    <label class="radiobutton">
+        <input class="visually-hidden" type="radio" name="sender" value="1">
+        <span></span>
+        Юридическое лицо
+    </label>
 
     <nav class="navigation-box">
         <ul class="main-menu main-menu_top">
