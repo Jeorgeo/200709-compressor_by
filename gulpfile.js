@@ -35,6 +35,9 @@ const project = './200709-compressor_by';
 const styleFiles = [
   project + '/src/scss/normalize.scss',
   project + '/src/scss/typography.scss',
+  project + '/src/scss/animation.scss',
+  project + '/src/scss/elements.scss',
+  project + '/src/scss/forms.scss',
   project + '/src/scss/header.scss',
   project + '/src/scss/main.scss',
   project + '/src/scss/footer.scss',
