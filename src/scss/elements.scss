@@ -36,14 +36,23 @@
     border-radius: 2px;
     box-sizing: border-box;
     cursor: pointer;
+    &--white {
+      border: 2px solid #ffffff;
+    }
   }
 }
+
 .checkbox__input:checked + .checkbox__check {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M16 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V16C0 16.5304 0.210714 17.0391 0.585786 17.4142C0.960859 17.7893 1.46957 18 2 18H16C16.5304 18 17.0391 17.7893 17.4142 17.4142C17.7893 17.0391 18 16.5304 18 16V2C18 1.46957 17.7893 0.960859 17.4142 0.585786C17.0391 0.210714 16.5304 0 16 0ZM16 2V16H2V2H16ZM7 14L3 10L4.41 8.58L7 11.17L13.59 4.58L15 6' fill='%23001535'/%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.checkbox__input:checked + .checkbox__check--white {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M16 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V16C0 16.5304 0.210714 17.0391 0.585786 17.4142C0.960859 17.7893 1.46957 18 2 18H16C16.5304 18 17.0391 17.7893 17.4142 17.4142C17.7893 17.0391 18 16.5304 18 16V2C18 1.46957 17.7893 0.960859 17.4142 0.585786C17.0391 0.210714 16.5304 0 16 0ZM16 2V16H2V2H16ZM7 14L3 10L4.41 8.58L7 11.17L13.59 4.58L15 6' fill='white'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /*--------------------------------------------------------------
 # Radiobutton * Кастомный radiobutton
@@ -408,13 +417,57 @@
     display: block;
     width: 18px;
     height: 11px;
-    background: url('../../img/icons/btn_arrow.svg') no-repeat center center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='13' viewBox='0 0 20 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.5H18M18 6.5L12.4615 1M18 6.5L12.4615 12' stroke='%233083FF' stroke-width='1.5'/%3E%3C/svg%3E");
     content: '';
     transition: $basic-transition;
+  }
+  &--white {
+    color: #ffffff;
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='13' viewBox='0 0 20 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.5H18M18 6.5L12.4615 1M18 6.5L12.4615 12' stroke='%23ffffff' stroke-width='1.5'/%3E%3C/svg%3E");
+    }
   }
   &:hover {
     &::after {
       right: -5px;
     }
   }
+}
+
+/*--------------------------------------------------------------
+# Icons * Иконки
+---------------------------------------------------------------*/
+
+.icon-box {
+  display: inline-block;
+  vertical-align: top;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease;
+  &--geo {
+    background-image: url('../../img/icons/icon_geo.svg');
+  }
+  &--wapp {
+    background-image: url('../../img/icons/icon_wapp-w.svg');
+  }
+  &--telegram {
+    background-image: url('../../img/icons/icon_telegram-w.svg');
+  }
+  &--viber {
+    background-image: url('../../img/icons/icon_viber-w.svg');
+  }
+  &--phone {
+    background-image: url('../../img/icons/icon_phone-w.svg');
+  }
+  &--mail {
+    background-image: url('../../img/icons/icon_mail-w.svg');
+  }
+  &--clock {
+    background-image: url('../../img/icons/icon_clock-w.svg');
+  }
+
 }

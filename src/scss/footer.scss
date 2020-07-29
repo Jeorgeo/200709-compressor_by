@@ -10,9 +10,54 @@
 
 
 .footer {
-
-}
-
-.social {
-
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1.5em 0;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: $basic-color-blue;
+  &__title {
+    font-size: 1.1em;
+  }
+  hr {
+    margin: 1em 0;
+    border: 1px solid #ffffff;
+  }
+  &__icons-box {
+    p {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 0.9em;
+    }
+    i {
+      margin-right: 5px;
+    }
+  }
+  &__catalog-menu {
+    li {
+      margin: 0.5em 0;
+    }
+  }
+  &__site-menu {
+    li {
+      margin: 0.5em 0;
+    }
+    .child {
+      padding-left: 20px;
+    }
+  }
+  &__link {
+    display: block;
+    margin: 1.2em 0;
+    font-size: 1.1em;
+  }
+  &__link-more {
+    width: max-content;
+    margin: 1.2em 0;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
 }
