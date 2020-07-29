@@ -55,6 +55,67 @@
 }
 
 /*---------------------------------------------------------------
+## filter-form *
+----------------------------------------------------------------*/
+
+.filter-form {
+  &__checkbox {
+    margin: 0.5em 0;
+  }
+  &__label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 49%;
+  }
+  &__input {
+    display: block;
+    width: 110px;
+    margin-left: 10px;
+    padding: 10px;
+    color: $basic-color-gray;
+    border: 1px solid $basic-color-lgray;
+    box-sizing: border-box;
+  }
+
+}
+
+.runner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin: 1.5em 0;
+  background-color: $basic-color-lgray;
+  &__area-runner {
+    position: absolute;
+    top: -2px;
+    left: 20px;
+    right: 40px;
+    display: block;
+    width: auto;
+    height: 8px;
+    background-color: $basic-color-blue;
+    &::after,
+    &::before {
+      position: absolute;
+      top: -2px;
+      display: block;
+      width: 3px;
+      height: 12px;
+      background-color: $basic-color-dark;
+      content: '';
+    }
+    &::after {
+      left: 0;
+    }
+    &::before {
+      right: 0;
+    }
+  }
+}
+
+/*---------------------------------------------------------------
 ## Popup-form *
 ----------------------------------------------------------------*/
 
