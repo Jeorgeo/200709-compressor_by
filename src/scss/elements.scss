@@ -383,5 +383,38 @@
     &.active {
       background-color: $basic-color-blue;
     }
+    &--gray {
+      background-color: $basic-color-lgray;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# links * Ссылки
+---------------------------------------------------------------*/
+
+.link-more {
+  position: relative;
+  display: block;
+  padding-right: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  color: $basic-color-blue;
+  box-sizing: border-box;
+  &::after {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    display: block;
+    width: 18px;
+    height: 11px;
+    background: url('../../img/icons/btn_arrow.svg') no-repeat center center;
+    content: '';
+    transition: $basic-transition;
+  }
+  &:hover {
+    &::after {
+      right: -5px;
+    }
   }
 }
