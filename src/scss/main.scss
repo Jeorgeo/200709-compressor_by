@@ -91,3 +91,25 @@
     position: relative;
   }
 }
+
+.reiews-slider {
+  &__review {
+    margin-bottom: 1.5em;
+  }
+}
+
+.review {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: $reviews-shadow;
+  &__title {
+    margin: 0.5em 0;
+    text-align: left;
+    text-transform: none;
+    font-size: 1.2em;
+  }
+}

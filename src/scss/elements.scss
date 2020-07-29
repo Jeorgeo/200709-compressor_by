@@ -149,6 +149,33 @@
 ## Btn-small * Кнопка для мобильных и иконок
 ---------------------------------------------------------------*/
 
+.btn {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: $basic-color-dark;
+  background-color: $basic-color-yellow;
+  border: none;
+  outline: none;
+  transition: $basic-transition;
+  &:hover {
+    color: #ffffff;
+  }
+  &--transparent {
+    color: $basic-color-blue;
+    background-color: #ffffff;
+    border: 2px solid $basic-color-blue;
+    &:hover {
+      color: #ffffff;
+      background-color: $basic-color-blue;
+    }
+  }
+}
+
 .btn-small {
   display: block;
   width: 24px;
@@ -264,7 +291,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  width: 320px;
+  width: 100%;
   min-height: 70px;
   padding: 10px 20px;
   color: #ffffff;
@@ -309,7 +336,7 @@
       color: $basic-color-yellow;
     }*/
     &--mobile {
-      font-size: 1.2em;
+      font-size: 1em;
       //color: #ffffff;
       &:hover,
       &.active {
@@ -332,5 +359,29 @@
   display: block;
   &__text {
     display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# sliders * Слайдеры * Галереи
+---------------------------------------------------------------*/
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  &__dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 1em 3px;
+    font-size: 0;
+    background-color: #ffffff;
+    border-radius: 50%;
+    &.active {
+      background-color: $basic-color-blue;
+    }
   }
 }

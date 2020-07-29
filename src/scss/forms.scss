@@ -77,7 +77,10 @@
     border: 1px solid $basic-color-lgray;
     box-sizing: border-box;
   }
-
+  &__btn {
+    width: 80%;
+    margin: 1em auto;
+  }
 }
 
 .runner {
