@@ -9,25 +9,182 @@
 --------------------------------------------------------------*/
 
 .header {
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background: #FFFFFF;
+  &-top {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    z-index: 1;
+    width: 280px;
+    background: #FFFFFF;
+    box-shadow: $basic-shadow;
+    transition: $basic-transition;
+    &__navigation-box {
+      padding: 10px 20px;
+    }
+    &.active {
+      left: 0;
+    }
+  }
+  &-bottom {
+    &__tab-box,
+    &__basket-box {
+      display: none;
+    }
+  }
+  &-mobile {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.1em 0;
+    background-color: #ffffff;
+    &__btn-small {
+    }
+  }
 }
 
-.logo-box {
-
-}
-
-.search-box {
-
-}
-
-.contacts-box {
-
-}
-
-.menu-box {
+.shedule {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  min-height: 70px;
+  padding: 10px 20px;
+  background-color: $basic-color-lgray;
+  border-bottom: 1px solid $basic-color-lgray;
+  box-sizing: border-box;
+  &__text {
+    padding-left: 10px;
+    color: $basic-color-gray;
+    p {
+      margin: 0.2em 0;
+    }
+  }
 
 }
 
 .navigation-box {
 
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  &__parent {
+    position: relative;
+    font-size: 1.2em;
+    a {
+      display: inline-block;
+      margin: 0.5em 0;
+    }
+    &:hover,
+    &.active {
+      color: $basic-color-blue;
+    }
+  }
+  &__has-childs {
+    font-size: 0.8em;
+    li {
+      color: $basic-color-dark;
+      &:hover,
+      &.active {
+        color: $basic-color-blue;
+      }
+    }
+  }
+  &__btn-accordeon {
+    margin-left: 10px;
+  }
+}
+
+.logo-box {
+  h1 {
+    font-size: 0.8em;
+    font-weight: 900;
+  }
+}
+
+.search-box {
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  padding: 20px 0;
+  background-color: $basic-color-blue;
+  box-sizing: border-box;
+  transition: $basic-transition;
+  &.active {
+    left: 0;
+  }
+  &__search-form {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.contacts-box {
+  position: absolute;
+  top: 100%;
+  left: 120%;
+  display: block;
+  width: 100%;
+  max-width: 245px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: $basic-shadow;
+  box-sizing: border-box;
+  transition: $basic-transition;
+  &__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2px 0;
+    font-size: 0.8em;
+    color: $basic-color-gray;
+    a {
+      margin-left: 10px;
+    }
+  }
+  &__btn-icon {
+    path {
+      fill: rgb(125, 133, 145);
+    }
+  }
+  &.active {
+    left: 20px;
+  }
+}
+
+.profile-box {
+  position: absolute;
+  top: -150%;
+  left: 65%;
+  display: block;
+  width: auto;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: $basic-shadow;
+  box-sizing: border-box;
+  transition: $basic-transition;
+  &__btn-icon {
+    margin: 15px 0;
+  }
+  &.active {
+    top: 100%;
+  }
 }

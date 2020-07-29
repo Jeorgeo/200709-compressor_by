@@ -176,6 +176,21 @@
   }
 }
 
+.btn-accordeon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid $basic-color-dark;
+  border-left: 2px solid $basic-color-dark;
+  transform: rotateZ(-45deg);
+  &.active {
+    transform: rotateZ(135deg);
+    border-bottom: 2px solid $basic-color-blue;
+    border-left: 2px solid $basic-color-blue;
+  }
+
+}
+
 .btn-icon {
   position: relative;
   display: flex;
@@ -188,10 +203,6 @@
   background-repeat: no-repeat;
   background-position: center;
   transition: all 0.3s ease;
-  &--count {
-    margin-top: 10px;
-    margin-right: 10px;
-  }
   &__count {
     position: absolute;
     top: -8px;
@@ -220,5 +231,89 @@
     path {
       fill: rgb(254,198,1);
     }
+  }
+  &--count {
+    margin-right: 10px;
+  }
+  &--shedule {
+    path {
+      fill: rgb(125,133,145);
+    }
+  }
+  &--white {
+    path {
+      fill: rgb(255,255,255);
+    }
+  }
+}
+
+.tab-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 320px;
+  min-height: 70px;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: $basic-color-blue;
+  box-shadow: $basic-shadow;
+  box-sizing: border-box;
+  &--mobile {
+    width: 100%;
+    color: $basic-color-blue;
+    background-color: #ffffff;
+    border-bottom: 1px solid #EEF0F4;
+    box-shadow: none;
+  }
+  &--gray {
+    color: $basic-color-gray;
+    background-color: $basic-color-lgray;
+    box-shadow: none;
+  }
+  &:hover {
+    color: $basic-color-dark;
+    background-color: #ffffff;
+    .btn-icon--white {
+      cursor: pointer;
+      path {
+        fill: $basic-color-dark;
+      }
+    }
+  }
+  &__title-link {
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-family: 'Montserrat-Bold', 'Arial', sans-serif;
+    font-size: 1.2em;
+    font-weight: normal;
+    /*color: $basic-color-blue;
+    &:hover,
+    &.active {
+      color: $basic-color-yellow;
+    }*/
+    &--mobile {
+      //color: #ffffff;
+      &:hover,
+      &.active {
+        color: $basic-color-yellow;
+      }
+    }
+  }
+  &__text {
+    padding-left: 10px;
+    p {
+      margin: 0.2em 0;
+    }
+    &--gray {
+      color: $basic-color-gray;
+    }
+  }
+}
+
+.profile-group {
+  display: block;
+  &__text {
+    display: none;
   }
 }

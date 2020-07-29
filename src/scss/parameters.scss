@@ -2,12 +2,17 @@
 # Parameters * Переменные и миксины
 --------------------------------------------------------------*/
 
-$basic-color-yellow: #FEC601;
+$basic-color-yellow: #FEC601; //rgb(254, 198, 1)
 $basic-color-dark05: rgba(0, 21, 53, 0.5);
-$basic-color-dark: #001535;
-$basic-color-gray: #7D8591;
-$basic-color-blue: #3083FF;
+$basic-color-dark: #001535; //rgb(0, 21, 53)
+$basic-color-gray: #7D8591; // rgb(125, 133, 145)
+$basic-color-lgray: #EEF0F4;
+$basic-color-blue: #3083FF; // rgb(48, 131, 255)
 $basic-color-lblue: #78BBFF;
 $basic-color-light: #EEF0F4;
 $basic-color-green: #73AF00;
 $basic-color-coral: #EB5757;
+
+$basic-shadow: 3px 3px 10px rgba(82, 109, 150, 0.2);
+
+$basic-transition: all 0.5s ease;

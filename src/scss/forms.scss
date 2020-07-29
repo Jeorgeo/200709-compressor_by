@@ -8,6 +8,51 @@
 
 --------------------------------------------------------------*/
 
+/*---------------------------------------------------------------
+## search-form *
+----------------------------------------------------------------*/
+
+.search-form {
+  &__label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    box-shadow: 3px 3px 10px rgba(82, 109, 150, 0.2);
+  }
+  &__input {
+    display: block;
+    width: calc(100% - 30px);
+    min-height: 30px;
+    padding: 4px 10px;
+    color: $basic-color-gray;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+  }
+  &__btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 1px;
+    color: $basic-color-yellow;
+    background-color: $basic-color-yellow;
+    border: none;
+    outline: none;
+    svg {
+      margin: auto;
+    }
+    path {
+      fill: rgb(0, 21, 53);
+    }
+    &:hover {
+      cursor: pointer;
+      path {
+        fill: rgb(255,255,255);
+      }
+    }
+  }
+}
 
 /*---------------------------------------------------------------
 ## Popup-form *

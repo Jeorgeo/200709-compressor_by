@@ -128,27 +128,213 @@
 
 }
 
-/*============== for Tablet landscape 1152px ===========================*/
-@media screen and (min-width: 1152px) {
+/*============== for Tablet landscape 1024px ===========================*/
+@media screen and (min-width: 1024px) {
 
   /*--------------------------------------------------------------
-  # Typography 1152px
+  # Typography 1024px
   --------------------------------------------------------------*/
 
   /*--------------------------------------------------------------
-  # Header 1152px
+  # Header 1024px
   --------------------------------------------------------------*/
 
+  .header {
+    &-top {
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      border-bottom: 1px solid $basic-color-lgray;
+      box-shadow: none;
+      &::after {
+        position: absolute;
+        top: 100%;
+        left: -50%;
+        display: block;
+        width: 200%;
+        height: 1px;
+        background-color: $basic-color-lgray;
+        content: '';
+      }
+      &__navigation-box {
+        padding: 0;
+      }
+      &__tab-box {
+        display: none;
+      }
+    }
+    &-mobile {
+      &__btn-small,
+      &__btn-icon {
+        display: none;
+      }
+    }
+    &-middle {
+      padding: 5px 0;
+      &__contacts-box {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 550px;
+      }
+    }
+    &-bottom {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      &__tab-box {
+        display: flex;
+        width: 25%;
+        max-width: 240px;
+        font-size: 0.7em;
+      }
+      &__search-box {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 30%;
+        max-width: 450px;
+      }
+      &__profile-box {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 20%;
+        max-width: 350px;
+        background-color: $basic-color-blue;
+        .btn-icon {
+          margin: 13px 10px;
+        }
+        path {
+          fill: #ffffff;
+        }
+      }
+      &__basket-box {
+        display: flex;
+        .basket-sum {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .contacts-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+    box-shadow: none;
+    &__item {
+      margin-right: 10px;
+    }
+    &__btn-icon {
+      path {
+        fill: rgb(48, 131, 255);
+      }
+    }
+  }
+
+  .shedule {
+    width: auto;
+    padding: 5px 0;
+    font-size: 0.9em;
+    background-color: #ffffff;
+    border: none;
+    &__text {
+      p {
+        display: inline-block;
+      }
+    }
+  }
+
+  .profile-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__text {
+      display: block;
+      margin-left: 5px;
+      font-size: 0.85em;
+    }
+  }
+
+  .main-menu {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    font-size: 0.75em;
+    color: $basic-color-gray;
+    &__parent {
+      padding: 27px 0;
+      > a {
+        padding: 0 5px;
+        border-bottom: 1px solid #ffffff;
+      }
+      &:hover {
+        .has-childs {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          display: block;
+          padding: 10px;
+          background-color: #ffffff;
+          box-shadow: $basic-shadow;
+          li {
+            margin: 5px 0;
+            color: $basic-color-gray;
+            &:hover {
+              color: $basic-color-blue;
+            }
+          }
+        }
+      }
+      &:hover,
+      &.active {
+        > a {
+          color: $basic-color-dark;
+          border-bottom: 1px solid $basic-color-dark;
+        }
+      }
+    }
+    &__has-childs {
+      display: none;
+    }
+    &__btn-accordeon {
+      display: none;
+    }
+  }
+
+  .btn-icon {
+    &--shedule {
+      path {
+        fill: rgb(48,131,255);
+      }
+    }
+  }
+
   /*--------------------------------------------------------------
-  # Content 1152px
+  # Content 1024px
   --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# calculator-page 1152px
+# calculator-page 1024px
 --------------------------------------------------------------*/
 
   /*--------------------------------------------------------------
-  # Footer 1152px
+  # Footer 1024px
   --------------------------------------------------------------*/
 }
 
@@ -162,6 +348,84 @@
   /*--------------------------------------------------------------
   # Header 1280px
   --------------------------------------------------------------*/
+  .header {
+    &-middle {
+      &__contacts-box {
+        max-width: 640px;
+      }
+    }
+    &-bottom {
+      &__profile-box {
+        width: 25%;
+      }
+      &__basket-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        .basket-sum {
+          display: block;
+          margin-left: 5px;
+          font-size: 0.8em;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .main-menu {
+    &__vl {
+      display: block;
+      width: 1px;
+      height: 1.2em;
+      margin: 0 5px;
+      background-color: $basic-color-gray;
+    }
+  }
+
+  .profile-box {
+    &__btn-icon {
+    }
+    &__vl {
+      display: block;
+      width: 1px;
+      height: auto;
+      margin: 0 5px;
+      background-color: #ffffff;
+    }
+  }
+
+  .search-box {
+    background-color: #ffffff;
+    &__search-form {
+      width: 95%;
+    }
+  }
+
+  .search-form {
+    &__label {
+      box-shadow: none;
+    }
+  }
+
+  .logo-box {
+    h1 {
+      font-size: 1em;
+    }
+  }
+
+  .contacts-box {
+    &__item {
+      font-size: 1em;
+    }
+  }
+
+  .profile-group {
+    &__text {
+      font-size: 1em;
+      font-weight: bold;
+    }
+  }
+
 
 
   /*--------------------------------------------------------------
@@ -185,6 +449,36 @@
   /*--------------------------------------------------------------
   # Header 1366px
   --------------------------------------------------------------*/
+
+  .header {
+    &-middle {
+      &__contacts-box {
+      }
+    }
+    &-bottom {
+      &__tab-box {
+        max-width: 256px;
+        font-size: 0.8em;
+      }
+      &__profile-box {
+      }
+      &__basket-box {
+        }
+      }
+    }
+
+    .logo-box {
+      h1 {
+        font-size: 1.2em;
+      }
+    }
+
+    .contacts-box {
+      &__item {
+        color: $basic-color-dark;
+      }
+    }
+
 
   /*--------------------------------------------------------------
   # Content 1366px
