@@ -1207,7 +1207,7 @@
           <a class="slide-type01__aside" href="#" target="_blank">
             <img src="pics/reviews/review-001.jpg" alt="">
           </a>
-          <div class="slide-type01__content">
+          <div class="slide-type01__bside">
             <h4 class="slide-type01__title">
               <figure class="slide-type01__logo">
                 <img src="pics/reviews/reviews_logo-001.png" alt="">
@@ -1229,7 +1229,7 @@
           <a class="slide-type01__aside" href="#" target="_blank">
             <img src="pics/reviews/review-001.jpg" alt="">
           </a>
-          <div class="slide-type01__content">
+          <div class="slide-type01__bside">
             <h4 class="slide-type01__title">
               <figure class="slide-type01__logo">
                 <img src="pics/reviews/reviews_logo-002.png" alt="">
@@ -1250,7 +1250,7 @@
           <a class="slide-type01__aside" href="#" target="_blank">
             <img src="pics/reviews/review-001.jpg" alt="">
           </a>
-          <div class="slide-type01__content">
+          <div class="slide-type01__bside">
             <h4 class="slide-type01__title">
               <figure class="slide-type01__logo">
                 <img src="pics/reviews/reviews_logo-003.png" alt="">
@@ -1287,28 +1287,34 @@
         Завершенные проекты
       </h3>
       <div class="projects-slider">
-        <aticle class="project projects-slider__project">
-          <figure class="project__logo">
-            <img src="pics/projects/project_001.png" alt="">
-          </figure>
-          <span class="project__date">
-            <span class="project__date-title">
-              18
+        <aticle class="project slide-type02 projects-slider__project">
+          <div class="slide-type02__aside">
+            <figure class="slide-type02__logo">
+              <img src="pics/projects/project_001.png" alt="">
+            </figure>
+            <span class="slide-type02__date">
+              <span class="slide-type02__date-title">
+                18
+              </span>
+              янв 2020
             </span>
-            янв 2020
-          </span>
-          <h4 class="project__title">
-            ООО «Виталюр»
-            <p>
-              Проектирование и прокладка электросети
-            </p>
-          </h4>
-          <p>
-            Разнообразный и богатый опыт начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки модели...
-          </p>
-          <a href="" class="link-more project__link-more">
-            Подробнее
-          </a>
+          </div>
+          <div class="slide-type02__bside">
+            <span class="slide-type02__article">
+              <h4 class="slide-type02__title">
+                ООО «Виталюр»
+                <p>
+                  Проектирование и прокладка электросети
+                </p>
+              </h4>
+              <p>
+                Разнообразный и богатый опыт начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки модели...
+              </p>
+            </span>
+            <a href="" class="link-more slide-type02__link-more">
+              Подробнее
+            </a>
+          </div>
         </aticle>
         <ul class="dots projects-slider__dots">
           <li class="dots__dot dots__dot--gray active"></li>
@@ -1326,7 +1332,7 @@
         Сертификаты
       </h3>
       <div class="images-slider">
-        <a class="certificate images-slider__certificate" href="#">
+        <a class="certificate slide-type03 images-slider__certificate" href="#">
           <img src="pics/certificates/certificate_002.jpg" alt="">
         </a>
         <a class="certificate images-slider__certificate" href="#">
@@ -1335,6 +1341,9 @@
         <a class="certificate images-slider__certificate" href="#">
           <img src="pics/certificates/certificate_003.jpg" alt="">
         </a>
+        <span class="btn-slider images-slider__btn-slider btn-slider--prev images-slider__btn-slider--prev">
+        </span>
+        <span class="btn-slider images-slider__btn-slider btn-slider--next images-slider__btn-slider--next"></span>
       </div>
     </div>
   </section>
@@ -1359,13 +1368,16 @@
         <a class="brand images-slider__brand" href="#">
           <img src="pics/brands/brand-3.png" alt="">
         </a>
+        <span class="btn-slider images-slider__btn-slider btn-slider--prev images-slider__btn-slider--prev">
+        </span>
+        <span class="btn-slider images-slider__btn-slider btn-slider--next images-slider__btn-slider--next"></span>
       </div>
     </div>
   </section>
 </main>
 <footer class="footer">
-  <div class="container">
-    <div class="footer-coll">
+  <div class="container footer__container">
+    <div class="footer__coll footer__coll--form">
       <h4 class="footer__title">
         обратная связь
       </h4>
@@ -1388,9 +1400,9 @@
           Отправить
         </button>
       </form>
+      <hr>
     </div>
-    <hr>
-    <div class="footer-coll">
+    <div class="footer__coll">
       <h4 class="footer__title">
         Контактная информация
       </h4>
@@ -1431,7 +1443,7 @@
         </p>
       </div>
     </div>
-    <div class="footer-coll">
+    <div class="footer__coll">
       <h4 class="footer__title">
         Каталог товаров
       </h4>
@@ -1456,7 +1468,7 @@
         Политика конфиденциальности
       </a>
     </div>
-    <div class="footer-coll">
+    <div class="footer__coll">
       <h4 class="footer__title">
         Покупателям
       </h4>
