@@ -257,10 +257,10 @@
 
 <main class="main main-page">
   <section class="main-slider">
-    <img src="/img/bg/bg_main.png" alt="">
+    <img src="/img/bg/bg_main.jpg" alt="">
   </section>
   <section class="main-filter">
-    <div class="container">
+    <div class="container main-filter__container">
       <div class="tab-box main-filter__tab-box active">
         <span class="btn-icon btn-icon--white">
           <svg width="36" height="32" viewBox="0 0 36 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -274,7 +274,7 @@
         </span>
         <a class="tab-box__title-link" href="#">Подобрать поршневой компрессор</a>
       </div>
-      <div class="filter-box">
+      <div class="filter-box filter-box--mobile">
         <form class="filter-form filter-box__filter-form" action="" method="post">
           <fieldset class="filter-box__slide">
             <figure>
@@ -754,27 +754,523 @@
         <a class="tab-box__title-link" href="#">Подобрать запчасти</a>
       </div>
     </div>
+    <div class="container">
+      <div class="filter-box filter-box--desktop">
+        <form class="filter-form filter-box__filter-form" action="" method="post">
+          <div class="filter-box__aside xl-24">
+            <fieldset class="filter-box__slide">
+              <figure>
+                <img src="pics/catalog/catalog_001.png" alt="">
+              </figure>
+              <div class="check-fields">
+                <span class="filter-box__title">
+                  Питание B:
+                </span>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  12В
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  24В
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  220В
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  380В
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Бензин
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Дизель
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="filter-box__runners">
+              <span class="filter-box__title">
+                Мощность, кВт:
+              </span>
+              <label class="filter-form__label">
+                от
+                <input class="filter-form__input" type="text" name="" value="5.3">
+              </label>
+              <label class="filter-form__label">
+                до
+                <input class="filter-form__input" type="text" name="" value="40.55">
+              </label>
+              <span class="filter-form__runner runner">
+                <span class="runner__area-runner"></span>
+              </span>
+              <span class="filter-box__title">
+                Давление, Атм:
+              </span>
+              <label class="filter-form__label">
+                от
+                <input class="filter-form__input" type="text" name="" value="3.3">
+              </label>
+              <label class="filter-form__label">
+                до
+                <input class="filter-form__input" type="text" name="" value="10.55">
+              </label>
+              <span class="filter-form__runner runner">
+                <span class="runner__area-runner"></span>
+              </span>
+            </fieldset>
+          </div>
+
+          <fieldset class="filter-box__checklist">
+            <div class="filter-box__checklist-column xl-21">
+              <span class="filter-box__title">
+                Бренд:
+              </span>
+              <i class="filter-box__btn-accordeon btn-accordeon btn-accordeon--filter active js-accordeon-btn"></i>
+              <div class="filter-box__checklist-list active">
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Абак
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Aircast
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Атлас
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Копко
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Аврора
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Бежецкий
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Blue
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Air
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Ceccato
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Comprag
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Elitech
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Фиак
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Fini
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Fubag
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Kaeser
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Kraftmann
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Ремеза
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Ударник
+                </label>
+              </div>
+            </div>
+            <div class="filter-box__checklist-column xl-24">
+              <span class="filter-box__title">
+                Для чего нужен компрессор:
+              </span>
+              <i class="filter-box__btn-accordeon btn-accordeon btn-accordeon--filter js-accordeon-btn"></i>
+              <div class="filter-box__checklist-list">
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Покрасить заборv
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Покрасить авто
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Накачать легковые шины
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Накачать грузовые шины
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Гараж
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Дача
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Шиномонтаж / мастерская
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Автосервис
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Прокачка водоснабжения
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Промывка системы отопления
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Продувка мелких деталей
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  дымогенератор коптильни
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Производство
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Медицина
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Стамотология
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Пищевая промышленность
+                </label>
+              </div>
+            </div>
+            <div class="filter-box__checklist-column xl-24">
+              <span class="filter-box__title">
+                Совместим с инструментом:
+              </span>
+              <i class="filter-box__btn-accordeon btn-accordeon btn-accordeon--filter js-accordeon-btn"></i>
+              <div class="filter-box__checklist-list">
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Аэрограф
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Гайковерт для легковых авто
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Гайковерт для грузовых авто
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Накачать грузовые шины
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Дрель
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Краскораспылитель
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Ножницы по металлу
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Отбойный молоток
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Пескоструйный аппарат
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Пескоструйный пистолет
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Пистолет для накачки шин
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Плазморез
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Полировальная машина
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Продувочный пистолет
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Скобозабиватель
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Шлифмашина
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Углошлифмашина
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Хоппер-ковш
+                </label>
+              </div>
+            </div>
+            <div class="filter-box__checklist-column xl-21">
+              <span class="filter-box__title">
+                Страна бренд:
+              </span>
+              <i class="filter-box__btn-accordeon btn-accordeon btn-accordeon--filter js-accordeon-btn"></i>
+              <div class="filter-box__checklist-list">
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Беларусь
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Германия
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Италия
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Швеция
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Россия
+                </label>
+              </div>
+              <span class="filter-box__title">
+                Страна изготовитель:
+              </span>
+              <i class="filter-box__btn-accordeon btn-accordeon btn-accordeon--filter js-accordeon-btn"></i>
+              <div class="filter-box__checklist-list">
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Китай
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Италия
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Беларусь
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Швеция
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Германия
+                </label>
+                <label class="filter-form__checkbox checkbox">
+                  <input class="input checkbox__input visually-hidden" name="" type="checkbox">
+                  <span class="checkbox__check"></span>
+                  Россия
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="filter-box__btn-box">
+            <a href="#" class="btn btn--transparent filter-form__btn">
+              Подобрать на инфографике
+            </a>
+            <a href="#" class="btn filter-form__btn">
+              Подобрать
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
   </section>
   <section class="main-reviews section section--gray">
     <div class="container">
       <h3 class="section-title">
         отзывы о нас
       </h3>
-      <div class="reiews-slider">
-        <article class="slide-item reviews-slider__slide-item">
-          <figure class="slide-item__logo">
-            <img src="pics/reviews/reviews_logo-1.png" alt="">
-          </figure>
-          <h4 class="slide-item__title">
-            ООО «Алюнин Техно»
-          </h4>
-          <p>
-            Имеется спорная точка зрения, гласящая примерно следующее: интерактивные прототипы лишь добавляют фракционных разногласий и функционально разнесены на независимые элементы.
-          </p>
-          <a href="" class="btn slide-item__btn">
-            Читать
+      <div class="reviews-slider">
+        <article class="slide-type01 reviews-slider__slide-type01">
+          <a class="slide-type01__aside" href="#" target="_blank">
+            <img src="pics/reviews/review-001.jpg" alt="">
           </a>
+          <div class="slide-type01__content">
+            <h4 class="slide-type01__title">
+              <figure class="slide-type01__logo">
+                <img src="pics/reviews/reviews_logo-001.png" alt="">
+              </figure>
+              <span>
+                ООО «Алюнин Техно»
+              </span>
+
+            </h4>
+            <p>
+              Имеется спорная точка зрения, гласящая примерно следующее: интерактивные прототипы лишь добавляют фракционных разногласий и функционально разнесены на независимые элементы.
+            </p>
+            <a href="" class="btn slide-type01__btn">
+              Читать
+            </a>
+          </div>
         </article>
+        <article class="slide-type01 reviews-slider__slide-type01 active">
+          <a class="slide-type01__aside" href="#" target="_blank">
+            <img src="pics/reviews/review-001.jpg" alt="">
+          </a>
+          <div class="slide-type01__content">
+            <h4 class="slide-type01__title">
+              <figure class="slide-type01__logo">
+                <img src="pics/reviews/reviews_logo-002.png" alt="">
+              </figure>
+              <span>
+                ОАО «Кондитерская фарбика Слодыч»
+              </span>
+            </h4>
+            <p>
+              Имеется спорная точка зрения, гласящая примерно следующее: интерактивные прототипы лишь добавляют фракционных разногласий и функционально разнесены на независимые элементы.
+            </p>
+            <a href="" class="btn slide-type01__btn">
+              Читать
+            </a>
+          </div>
+        </article>
+        <article class="slide-type01 reviews-slider__slide-type01">
+          <a class="slide-type01__aside" href="#" target="_blank">
+            <img src="pics/reviews/review-001.jpg" alt="">
+          </a>
+          <div class="slide-type01__content">
+            <h4 class="slide-type01__title">
+              <figure class="slide-type01__logo">
+                <img src="pics/reviews/reviews_logo-003.png" alt="">
+              </figure>
+              <span>
+                ЖКХ «Дятлово»
+              </span>
+
+            </h4>
+            <p>
+              Имеется спорная точка зрения, гласящая примерно следующее: интерактивные прототипы лишь добавляют фракционных разногласий и функционально разнесены на независимые элементы.
+            </p>
+            <a href="" class="btn slide-type01__btn">
+              Читать
+            </a>
+          </div>
+        </article>
+        <span class="btn-slider reviews-slider__btn-slider btn-slider--prev reviews-slider__btn-slider--prev">
+        </span>
+        <span class="btn-slider reviews-slider__btn-slider btn-slider--next reviews-slider__btn-slider--next"></span>
         <ul class="dots reviews-slider__dots">
           <li class="dots__dot active"></li>
           <li class="dots__dot"></li>

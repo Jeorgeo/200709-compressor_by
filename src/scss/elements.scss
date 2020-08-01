@@ -168,7 +168,7 @@
   font-weight: bold;
   color: $basic-color-dark;
   background-color: $basic-color-yellow;
-  border: none;
+  border: 2px solid $basic-color-yellow;
   outline: none;
   transition: $basic-transition;
   &:hover {
@@ -232,8 +232,38 @@
       border-left: 2px solid $basic-color-dark;
     }
   }
+}
 
-
+.btn-slider {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 42px;
+  border: 4px solid $basic-color-blue;
+  background-color: $basic-color-blue;
+  &::before {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    transform: rotateZ(45deg);
+    content: '';
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    &::before {
+      border-bottom: 2px solid $basic-color-blue;
+      border-left: 2px solid $basic-color-blue;
+    }
+  }
+  &--next {
+    transform: rotateZ(180deg);
+  }
 }
 
 .btn-icon {
