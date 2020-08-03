@@ -11,6 +11,47 @@
 .main {
   width: 100%;
   margin-top: 70px;
+  &--gray {
+    background-color: $basic-color-lgray;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+# breadcrumbs * Главный слайдер
+--------------------------------------------------------------*/
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0.8em 0;
+  font-weight: 600;
+  &__item {
+    display: none;
+    width: auto;
+    font-size: 1.05em;
+
+    &--active {
+      display: block;
+    }
+  }
+  &__separator {
+    display: none;
+    width: 7px;
+    height: 7px;
+    margin: 0 10px;
+    border-top: 2px solid $basic-color-dark;
+    border-right: 2px solid $basic-color-dark;
+    transform: rotateZ(45deg);
+    &--active {
+      display: block;
+      transform: rotateZ(-135deg);
+    }
+  }
 }
 
 /*--------------------------------------------------------------

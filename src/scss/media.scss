@@ -156,8 +156,8 @@
     .xl-24 {
       width: 24%;
     }
-
   }
+
 
   /*--------------------------------------------------------------
   # Header 1024px
@@ -218,6 +218,7 @@
       align-items: center;
       justify-content: space-between;
       width: 90%;
+      max-width: 1600px;
       &__tab-box {
         display: flex;
         width: 25%;
@@ -258,8 +259,56 @@
           display: none;
         }
       }
+      .fly-box {
+        display: none;
+      }
     }
   }
+
+  .flying-header {
+    position: fixed;
+    top: 30px;
+    .fly-hidden {
+      display: none;
+    }
+    &::before {
+      position: absolute;
+      top: -30px;
+      left: -10%;
+      z-index: -9;
+      display: block;
+      width: 120%;
+      height: 60px;
+      background-color: #ffffff;
+      content: '';
+    }
+    &::after {
+      position: absolute;
+      top: 30px;
+      left: -10%;
+      z-index: -9;
+      display: block;
+      width: 120%;
+      height: 60px;
+      background-color: $basic-color-lgray;
+      border-bottom: 1px solid rgba(125, 133, 145, 0.1);
+      content: '';
+    }
+    .fly-box,
+    .tab-box {
+      position: relative;
+    }
+    .fly-box {
+      display: block;
+      &__contacts-box {
+        display: flex;
+        justify-content: space-between;
+        background-color: transparent;
+      }
+    }
+
+  }
+
 
   .contacts-box {
     display: flex;
@@ -361,6 +410,10 @@
 
   .main {
     margin-top: 30px;
+    padding-top: 30px;
+    &__main-page {
+      padding-top: 0;
+    }
   }
 
   .main-slider {
