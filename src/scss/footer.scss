@@ -10,9 +10,7 @@
 
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  @include flex-column;
   padding: 1.5em 0;
   font-size: 1em;
   color: #ffffff;
@@ -26,10 +24,7 @@
   }
   &__icons-box {
     p {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
+      @include flex-row;
       font-size: 0.9em;
     }
     i {

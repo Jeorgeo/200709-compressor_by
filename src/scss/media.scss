@@ -170,10 +170,7 @@
       top: 0;
       left: 0;
       z-index: 3;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
+      @include flex-row;
       justify-content: space-between;
       width: 100%;
       border-bottom: 1px solid $basic-color-lgray;
@@ -212,10 +209,7 @@
     }
     &-bottom {
       position: absolute;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
+      @include flex-row;
       justify-content: space-between;
       width: 90%;
       max-width: 1600px;
@@ -238,9 +232,7 @@
         position: relative;
         top: 0;
         left: 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        @include flex-row;
         justify-content: space-around;
         width: 20%;
         max-width: 350px;
@@ -305,15 +297,15 @@
         justify-content: space-between;
         background-color: transparent;
       }
+      &__logo-box {
+        display: none;
+      }
     }
-
   }
 
 
   .contacts-box {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row;
     padding: 5px;
     box-shadow: none;
     &__item {
@@ -340,9 +332,7 @@
   }
 
   .profile-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex-row;
     &__text {
       display: block;
       margin-left: 5px;
@@ -416,6 +406,23 @@
     }
   }
 
+  /*--------------------------------------------------------------
+  # breadcrumbs * Хлебные крошки
+  --------------------------------------------------------------*/
+
+  .breadcrumbs {
+    &__item {
+      display: block;
+    }
+    &__separator {
+      display: block;
+      &--active {
+        display: block;
+        transform: rotateZ(45deg);
+      }
+    }
+  }
+
   .main-slider {
     height: 540px;
   }
@@ -428,8 +435,7 @@
       top: -35px;
       left: 0;
       right: 0;
-      display: flex;
-      flex-direction: row;
+      @include flex-row;
       align-items: stretch;
       justify-content: space-between;
       margin: auto;
@@ -443,9 +449,7 @@
 
   .filter-box {
     &__filter-form {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      @include flex-row;
       align-items: flex-start;
       justify-content: space-between;
       margin: 1em 0;
@@ -475,9 +479,8 @@
       display: none;
     }
     &__btn-box {
-      display: flex;
+      @include flex-row;
       flex-direction: row-reverse;
-      align-items: center;
       justify-content: center;
     }
     &--mobile {
@@ -497,9 +500,7 @@
 
   .reviews-slider {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row;
     justify-content: center;
     margin: 3em 0;
     &__dots {
@@ -546,10 +547,7 @@
       }
     }
     &__title {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
+      @include flex-row;
       font-size: 0.9em;
       span {
         display: block;
@@ -584,18 +582,14 @@
     justify-content: flex-start;
     align-items: center;
     &__aside {
-      display: flex;
-      flex-direction: row;
+      @include flex-row;
       justify-content: space-between;
-      align-items: center;
       width: auto;
       text-align: center;
     }
     &__bside {
-      display: flex;
-      flex-direction: row;
+      @include flex-row;
       justify-content: space-between;
-      align-items: center;
       text-align: left;
       width: auto;
       padding: 0 3em;
@@ -655,9 +649,7 @@
 
   .footer {
     &__container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      @include flex-row;
       justify-content: space-between;
     }
     &__coll {

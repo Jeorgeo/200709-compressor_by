@@ -171,12 +171,13 @@
   border: 2px solid $basic-color-yellow;
   outline: none;
   transition: $basic-transition;
+  box-sizing: border-box;
   &:hover {
     color: #ffffff;
   }
   &--transparent {
     color: $basic-color-blue;
-    background-color: #ffffff;
+    background-color: transparent;
     border: 2px solid $basic-color-blue;
     &:hover {
       color: #ffffff;
@@ -195,6 +196,24 @@
   background-repeat: no-repeat;
   background-position: center;
   transition: all 0.3s ease;
+  &:hover,
+  &.active {
+    position: relative;
+    cursor: pointer;
+    background-color: $basic-color-yellow;
+    .btn-small__link {
+      position: absolute;
+      top: -20px;
+      right: 20px;
+      display: block;
+      width: max-content;
+      padding: 5px;
+      font-size: 16px;
+      color: $basic-color-dark;
+      background: #FFFFFF;
+      box-shadow: 2px 2px 10px rgba(0, 21, 53, 0.15);
+    }
+  }
   &--menu {
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12H16V9.6H0V12ZM0 0V2.4H16V0H0ZM0 7.2H16V4.8H0V7.2Z' fill='white'/%3E%3C/svg%3E");
   }
@@ -205,10 +224,19 @@
     border-radius: 50%;
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.76017 3.8401C2.76017 1.97386 4.13501 0.600098 6.00017 0.600098C7.86425 0.600098 9.24017 1.97386 9.24017 3.8401C9.24017 5.70634 7.86425 7.0801 6.00017 7.0801C4.13501 7.0801 2.76017 5.70634 2.76017 3.8401Z' fill='white'/%3E%3Cpath d='M7.08017 8.77786C8.93021 8.77786 10.5459 9.72826 11.5146 11.1539C10.1344 12.6313 8.17637 13.5601 6.00017 13.5601C3.82397 13.5601 1.86593 12.6313 0.485688 11.1539C1.45445 9.72826 3.06905 8.77786 4.92017 8.77786H7.08017Z' fill='white'/%3E%3C/svg%3E");
   }
-  &:hover,
-  &.active {
-    cursor: pointer;
-    background-color: $basic-color-yellow;
+  @for $i from 1 through 9 {
+    &--tool00#{$i} {
+      width: 30px;
+      height: 30px;
+      background-image: url('../../img/icons/tools/icon_tool-00#{$i}.svg');
+    }
+  }
+  @for $i from 10 through 26 {
+    &--tool0#{$i} {
+      width: 30px;
+      height: 30px;
+      background-image: url('../../img/icons/tools/icon_tool-0#{$i}.svg');
+    }
   }
 }
 
@@ -336,13 +364,43 @@
       fill: rgb(255,255,255);
     }
   }
+  &--compare {
+    width: 20px;
+    height: 20px;
+    background: url('../../img/icons/icon_compare-blue.svg') no-repeat center;
+    background-size: contain;
+  }
+  &--like {
+    width: 20px;
+    height: 20px;
+    background: url('../../img/icons/icon_like-blue.svg') no-repeat center;
+    background-size: contain;
+  }
+  &--basket {
+    width: 20px;
+    height: 20px;
+    background: url('../../img/icons/icon_basket.svg') no-repeat center;
+    background-size: contain;
+  }
+  &--delivery {
+    width: 20px;
+    height: 20px;
+    background: url('../../img/icons/icon_delivery.svg') no-repeat center;
+    background-size: contain;
+  }
+  &--guarantee {
+    width: 20px;
+    height: 20px;
+    background: url('../../img/icons/icon_guarantee.svg') no-repeat center;
+    background-size: contain;
+  }
 }
 
+/*-----------------------------Табы------------------------------*/
+
 .tab-box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
+  position: relative;
+  @include flex-row;
   justify-content: space-between;
   width: 100%;
   min-height: 70px;
@@ -351,18 +409,6 @@
   background-color: $basic-color-blue;
   box-shadow: $basic-shadow;
   box-sizing: border-box;
-  &--mobile {
-    width: 100%;
-    color: $basic-color-blue;
-    background-color: #ffffff;
-    border-bottom: 1px solid #EEF0F4;
-    box-shadow: none;
-  }
-  &--gray {
-    color: $basic-color-gray;
-    background-color: $basic-color-lgray;
-    box-shadow: none;
-  }
   &:hover,
   &.active {
     color: $basic-color-dark;
@@ -396,6 +442,12 @@
         color: $basic-color-yellow;
       }
     }
+    &--card {
+      font-size: 1em;
+    }
+    &--card-upsale {
+      width: calc(100% - 40px);
+    }
   }
   &__text {
     padding-left: 10px;
@@ -405,6 +457,112 @@
     &--gray {
       color: $basic-color-gray;
     }
+  }
+  &__img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: $basic-color-lgray;
+    box-sizing: border-box;
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      background: url('../../img/bg/bg_img.svg') no-repeat center;
+      background-size: contain;
+      content: '';
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      //background: $basic-color-lgray url('../../img/bg/bg_img.svg') no-repeat center;
+      background-color: $basic-color-lgray;
+    }
+  }
+  &__help-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: $basic-color-blue;
+    border-bottom-left-radius: 15px;
+    transition: $basic-transition;
+    &::after {
+      position: absolute;
+      top: 1px;
+      right: 5px;
+      width: 9px;
+      height: 16px;
+      background: url('../../img/icons/icon_help.svg') no-repeat center;
+      background-size: contain;
+      content: '';
+    }
+    &:hover {
+      border-bottom-left-radius: 0;
+      transition: $basic-transition;
+    }
+  }
+  &--mobile {
+    width: 100%;
+    color: $basic-color-blue;
+    background-color: #ffffff;
+    border-bottom: 1px solid #EEF0F4;
+    box-shadow: none;
+  }
+  &--gray {
+    color: $basic-color-gray;
+    background-color: $basic-color-lgray;
+    box-shadow: none;
+  }
+  &--card {
+    text-align: center;
+  }
+  &--card-upsale {
+    color: $basic-color-gray;
+    background-color: #ffffff;
+  }
+}
+
+
+/*-------------------------Счетчики кол-ва----------------------*/
+
+.quantity-box {
+  @include flex-row;
+  justify-content: space-between;
+  width: 86px;
+  &__input {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    color: $basic-color-gray;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 3px 3px 10px rgba(82, 109, 150, 0.2);
+    box-sizing: border-box;
+  }
+  &__btn {
+    cursor: pointer;
+    display: block;
+    width: 20px;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.3em;
+    color: $basic-color-dark;
+    background-color: transparent;
+    box-sizing: border-box;
   }
 }
 
@@ -420,10 +578,7 @@
 ---------------------------------------------------------------*/
 
 .dots {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
+  @include flex-row;
   justify-content: center;
   &__dot {
     display: block;
@@ -438,6 +593,83 @@
     }
     &--gray {
       background-color: $basic-color-lgray;
+    }
+  }
+}
+
+.card-galery {
+  @include flex-row;
+  width: 100%;
+  margin: 1em 0;
+  &__galery-slider {
+    @include flex-row;
+    justify-content: space-around;
+    width: calc(100% - 40px);
+  }
+  p {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 500px;
+  }
+  &__slide {
+
+  }
+  &__title {
+    display: block;
+    width: 100%;
+    font-size: 22px;
+  }
+  &__img {
+    display: block;
+    width: 90px;
+    height: 70px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    &--card-parameters {
+      height: auto;
+      margin: auto;
+      padding: 10px 5px;
+      border: 2px solid $basic-color-lgray;
+    }
+  }
+  &__btn {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: $basic-color-blue;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      top: 6px;
+      left: 8px;
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-bottom: 2px solid #fff;
+      border-left: 2px solid #fff;
+      transform: rotateZ(45deg);
+      content: '';
+    }
+    &:hover {
+      background-color: #ffffff;
+      &::before {
+        border-bottom: 2px solid $basic-color-blue;
+        border-left: 2px solid $basic-color-blue;
+      }
+    }
+    &--next {
+      &::before {
+        left: 4px;
+        transform: rotateZ(-135deg);
+      }
+    }
+    &--gray {
+      &:hover {
+        background-color: $basic-color-lgray;
+      }
     }
   }
 }
@@ -484,6 +716,8 @@
 # Icons * Иконки
 ---------------------------------------------------------------*/
 
+/*---------------------Стандратные иконки----------------------*/
+
 .icon-box {
   display: inline-block;
   vertical-align: top;
@@ -491,6 +725,7 @@
   height: 18px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   transition: all 0.3s ease;
   &--geo {
     background-image: url('../../img/icons/icon_geo.svg');
@@ -513,5 +748,76 @@
   &--clock {
     background-image: url('../../img/icons/icon_clock-w.svg');
   }
+  &--service {
+    background-image: url('../../img/icons/icon_compressor-4.svg');
+  }
+  &--by {
+    background-image: url('../../img/icons/country/icon_country-by.svg');
+  }
 
+}
+
+/*-------------------------Рейтинг---------------------------*/
+
+.rating {
+  @include flex-row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  &__star {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    &--gray {
+      background-image: url('../../img/icons/icon_star-g.svg');
+    }
+    &--white {
+      background-image: url('../../img/icons/icon_star-w.svg');
+    }
+    &--active {
+      background-image: url('../../img/icons/icon_star-y.svg');
+    }
+    &--small {
+      width: 14px;
+      height: 14px;
+    }
+    /*&:hover {
+      background-image: url('../../img/icons/icon_star-y.svg');
+    }*/
+  }
+}
+
+.rating-medal {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url('../../img/icons/expert/icon-expert_004.png');
+
+}
+
+/*------------------------элементы каталога--------------------------*/
+
+.price {
+  display: block;
+  width: 100%;
+  @include font-bold;
+  font-size: 30px;
+  font-weight: bold;
+  &__presence {
+    display: block;
+    width: 100%;
+    @include font-normal;
+    font-size: 13px;
+    &--catalog-card {
+      font-size: 11px;
+      //margin: 5px 0;
+    }
+  }
 }

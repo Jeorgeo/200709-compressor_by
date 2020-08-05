@@ -17,3 +17,46 @@ $basic-shadow: 3px 3px 10px rgba(82, 109, 150, 0.2);
 $reviews-shadow: 3px 3px 14px rgba(0, 21, 53, 0.25);
 
 $basic-transition: all 0.5s ease;
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/*--------------------------------------------------------------
+# Fonts * Подлючение шрифтов
+--------------------------------------------------------------*/
+/*
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf');
+  src: local('../fonts/Montserrat-Regular.ttf'), local('Montserrat-Regular'),
+  url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: local('../fonts/Montserrat-Bold'), local('Montserrat-Bold'),
+  url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+*/
+@mixin font-bold {
+  font-family: 'Montserrat-Bold', 'Arial', serif;
+}
+
+@mixin font-normal {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}

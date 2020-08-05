@@ -19,13 +19,11 @@
 
 
 /*--------------------------------------------------------------
-# breadcrumbs * Главный слайдер
+# breadcrumbs * Хлебные крошки
 --------------------------------------------------------------*/
 
 .breadcrumbs {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @include flex-row;
   justify-content: flex-start;
   width: 100%;
   margin: 0.8em 0;
@@ -81,19 +79,13 @@
 
 .filter-box {
   &__runners {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    @include flex-row;
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
   }
   &__slide {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    @include flex-row;
     justify-content: space-between;
     figure {
       display: block;
@@ -105,16 +97,11 @@
     }
   }
   &__checklist {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row;
   }
   &__checklist-column {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    @include flex-row;
     width: 100%;
   }
   &__checklist-list {
@@ -150,10 +137,7 @@
 }
 
 .slide-type01 {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
+  @include flex-column;
   text-align: center;
   width: 100%;
   height: auto;
@@ -188,10 +172,7 @@
 }
 
 .slide-type02 {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
+  @include flex-column;
   text-align: center;
   &__date {
     display: block;
@@ -248,6 +229,297 @@
     img {
       margin: auto;
     }
+  }
+}
+
+/*--------------------------------------------------------------
+# Catalog-product-page * Детальная страница каталога
+--------------------------------------------------------------*/
+
+.card-main {
+  @include flex-row;
+  &__title-box {
+    @include flex-row;
+    padding-bottom: 1em;
+  }
+  &__title {
+    width: 100%;
+    text-align: left;
+    font-size: 1.4em;
+  }
+  &__price-box {
+    margin: 1em 0;
+  }
+}
+
+.title-box {
+  &__rating {
+    margin-left: 10px;
+  }
+}
+
+.slider-box {
+  @include flex-row;
+  justify-content: space-between;
+  &__card-galery {
+    max-width: 280px;
+  }
+  &__rating {
+    display: none;
+  }
+}
+
+.price-box {
+  position: relative;
+  @include flex-row;
+  justify-content: space-between;
+  &__quantity-box {
+    margin: 2em 0;
+  }
+  &__btn {
+    width: 200px;
+    box-sizing: border-box;
+  }
+}
+
+.compare-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include flex-row;
+  justify-content: space-between;
+  width: 70px;
+  &__link {
+    font-size: 0;
+  }
+}
+
+.partners-box {
+  @include flex-row;
+  justify-content: space-between;
+  &__btn {
+    margin: 0.5em 0;
+    &--full {
+      width: 100%;
+    }
+    &--half {
+      width: 48%;
+    }
+  }
+}
+
+.services-box {
+  &__service {
+    @include flex-row;
+    flex-wrap: nowrap;
+    margin: 1em auto;
+    font-size: 0.9em;
+  }
+  &__btn-icon {
+    margin-right: 10px;
+  }
+}
+
+.partners-prices {
+  @include flex-row;
+  &__price {
+    display: block;
+    font-size: 16px;
+  }
+}
+
+.card-parameters {
+  padding: 2em 0;
+  background-color: #ffffff;
+  &__tabs {
+    @include flex-row;
+  }
+  &__tab {
+    @include flex-row;
+    margin: 2em 0;
+  }
+  &__tab-article {
+    @include flex-row;
+  }
+  &__tab-title {
+    width: max-content;
+    max-width: 70%;
+    margin: 0.5em 0;
+    margin-right: 1em;
+    text-align: left;
+  }
+  &__tab-content {
+    display: none;
+    &.active {
+      display: block;
+    }
+    li {
+      position: relative;
+      z-index: 2;
+      @include flex-row;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 0.8em;
+    }
+  }
+  &__tab-list {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 5px 10px 5px 0;
+    width: 50%;
+    box-sizing: border-box;
+    &::after {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 98%;
+      border: 1px solid $basic-color-lgray;
+      content: '';
+    }
+    span {
+      position: relative;
+      z-index: 3;
+      padding-right: 10px;
+      background-color: #ffffff;
+    }
+  }
+  &__tab-records {
+    position: relative;
+    z-index: 2;
+    @include flex-row;
+    width: 48%;
+    padding: 5px 0 5px 10px;
+    color: $basic-color-gray;
+  }
+  &__btn-small {
+    margin: 5px;
+  }
+  &__tab-box {
+    margin: 0.5em 0;
+  }
+}
+
+.card-upsale {
+  margin: 1.5em 0;
+  &__section-title {
+    font-size: 30px;
+  }
+  &__tab-box {
+    margin: 1em 0;
+  }
+  &__cards-slider {
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+  }
+  &__cards {
+    position: relative;
+    left: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 2700px;
+    padding-right: 5%;
+  }
+  &__catalog-card {
+    display: block;
+    margin: 1.5em 0;
+  }
+}
+
+/*---------------------Карточка товара-------------------------*/
+
+.catalog-card {
+  width: 247px;
+  min-height: 570px;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 20px rgba(0, 21, 53, 0.25);
+  &__top-part {
+    @include flex-row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px;
+    box-sizing: border-box;
+    border-bottom: 2px solid $basic-color-lgray;
+  }
+  &__bottom-part {
+    @include flex-row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  &__image {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 1em;
+    border: 2px solid $basic-color-lgray;
+    box-sizing: border-box;
+  }
+  &__raiting-box {
+    @include flex-row;
+    align-items: stretch;
+    justify-content: center;
+    width: 80px;
+  }
+  &__rating-medal {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  &__price {
+    width: 120px;
+    font-size: 14px;
+  }
+  &__icons-box {
+    @include flex-row;
+    justify-content: space-between;
+    width: 50px;
+  }
+  &__title {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+  }
+  &__code {
+    font-size: 12px;
+  }
+  &__records {
+    font-size: 11px;
+    line-height: 20px;
+    color: $basic-color-gray;
+  }
+  &__hidden-records {
+    display: none;
+    font-size: 11px;
+    line-height: 20px;
+    background-color: #ffffff;
+    color: $basic-color-gray;
+  }
+  &__order-box {
+    @include flex-row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  &__btn {
+    padding: 6px;
+    font-size: 12px;
+  }
+  &__input {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+    padding: 6px;
   }
 
 }

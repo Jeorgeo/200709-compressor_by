@@ -14,9 +14,7 @@
 
 .search-form {
   &__label {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row;
     width: 100%;
     box-shadow: 3px 3px 10px rgba(82, 109, 150, 0.2);
   }
@@ -63,9 +61,7 @@
     margin: 0.5em 0;
   }
   &__label {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex-row;
     width: 49%;
   }
   &__input {
@@ -90,9 +86,7 @@
     color: #ffffff;
   }
   &__label {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex-row;
     width: 100%;
   }
   &__input {
@@ -242,9 +236,7 @@
     min-width: 250px;
     max-height: calc(100% + 10px);
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include flex-column;
     padding: 10px 20px;
     background: #F0F0FC;
     border-radius: 10px;
