@@ -331,6 +331,9 @@
 .card-parameters {
   padding: 2em 0;
   background-color: #ffffff;
+  &__row {
+    @include flex-row;
+  }
   &__tabs {
     @include flex-row;
   }
@@ -412,6 +415,9 @@
     width: 90px;
     height: 90px;
     margin: 0.5em 0;
+  }
+  &__estimate {
+    margin-right: 10px;
   }
   &__tab-records {
     position: relative;

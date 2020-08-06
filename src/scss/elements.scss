@@ -5,6 +5,7 @@
 ----------------------------------------------------------------
 # Checkbox
 # Radiobutton
+# Runners
 # Preloader
 # Btn
 
@@ -120,6 +121,49 @@
 
   input[type="radio"]:checked + span:after {
     opacity: 1;
+  }
+}
+
+/*--------------------------------------------------------------
+# Runners * Бегунки
+---------------------------------------------------------------*/
+
+.runner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin: 1.5em 0;
+  background-color: $basic-color-lgray;
+  &__area-runner {
+    position: absolute;
+    top: -2px;
+    left: 20px;
+    right: 40px;
+    display: block;
+    width: auto;
+    height: 8px;
+    background-color: $basic-color-blue;
+    &::after,
+    &::before {
+      position: absolute;
+      top: -2px;
+      display: block;
+      width: 3px;
+      height: 12px;
+      background-color: $basic-color-dark;
+      content: '';
+    }
+    &::after {
+      left: 0;
+    }
+    &::before {
+      right: 0;
+    }
+    &--full {
+      left: 0;
+      right: 0;
+    }
   }
 }
 
@@ -835,7 +879,42 @@
   background-position: center;
   background-size: contain;
   background-image: url('../../img/icons/expert/icon-expert_004.png');
+}
 
+.rating-level {
+  @include flex-row;
+  justify-content: flex-start;
+  width: 100%;
+  &__count {
+    display: block;
+    width: 20px;
+    text-align: left;
+  }
+  &__runner {
+    width: calc(100% - 140px);
+    margin: 8px 15px 8px 0;
+  }
+  &__stars {
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-repeat: space;
+    background-position: left;
+    background-size: contain;
+    background-image: url('../../img/icons/icon_star-y.svg');
+    &--two {
+      width: 42px;
+    }
+    &--three {
+      width: 63px;
+    }
+    &--four {
+      width: 84px;
+    }
+    &--five {
+      width: 105px;
+    }
+  }
 }
 
 /*------------------------элементы каталога--------------------------*/
