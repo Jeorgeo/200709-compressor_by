@@ -1,8 +1,15 @@
 $(document).ready(function () {
 
-  $('.js-accordeon-btn').click(function () {
+  $('.js-accordeon-btn').click(function() {
+    //this.preventDefault;
     $(this).toggleClass('active').next().slideToggle();
     $('.js-accordeon-btn').not(this).removeClass('active').next().slideUp();
+  });
+
+  $('.js-tab-btn').click(function() {
+    //this.preventDefault;
+    $(this).toggleClass('active').next().slideToggle();
+    $('.js-tab-btn').not(this).removeClass('active').next().slideUp();
   });
 
   window.onscroll = function() {

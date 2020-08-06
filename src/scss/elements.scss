@@ -394,6 +394,27 @@
     background: url('../../img/icons/icon_guarantee.svg') no-repeat center;
     background-size: contain;
   }
+  &--rocket {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    background: url('../../img/icons/icon_rocket.svg') no-repeat center;
+    background-size: contain;
+  }
+  &--info {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    background: url('../../img/icons/icon_info.svg') no-repeat center;
+    background-size: contain;
+  }
+  &--tools {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    background: url('../../img/icons/icon_tools.svg') no-repeat center;
+    background-size: contain;
+  }
 }
 
 /*-----------------------------Табы------------------------------*/
@@ -572,6 +593,21 @@
     display: none;
   }
 }
+
+/*-------------------Списки * Кастомные нумераторы--------------*/
+
+.custom-list {
+  padding-left: 20px;
+  li::marker {
+    display: block;
+    font-weight: bold;
+    color: $basic-color-blue;
+  }
+  &--disk {
+    list-style: disc;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # sliders * Слайдеры * Галереи

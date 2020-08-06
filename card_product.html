@@ -419,10 +419,10 @@
     <section class="card-parameters">
       <div class="container">
         <div class="card-parameters__tabs">
-          <div class="tab-box card-parameters__tab-box tab-box--card active">
-            <a class="tab-box__title-link tab-box__title-link--card" href="#">описание | параметры</a>
+          <div class="tab-box card-parameters__tab-box tab-box--card js-tab-btn active">
+            <span class="tab-box__title-link tab-box__title-link--card">описание | параметры</span>
           </div>
-          <div class="card-parameters__tab">
+          <div class="card-parameters__tab active">
             <article class="card-parameters__tab-article">
               <h4 class="card-parameters__tab-title">
                 описание:
@@ -705,11 +705,86 @@
               </ul>
             </article>
           </div>
-          <div class="tab-box card-parameters__tab-box tab-box--card">
-            <a class="tab-box__title-link tab-box__title-link--card" href="#">рекомендации | обслуживание</a>
+          <div class="tab-box card-parameters__tab-box tab-box--card js-tab-btn">
+            <span class="tab-box__title-link tab-box__title-link--card">рекомендации | обслуживание</span>
           </div>
-          <div class="tab-box card-parameters__tab-box tab-box--card">
-            <a class="tab-box__title-link tab-box__title-link--card" href="#">рейтинг | отзывы | вопросы</a>
+          <div class="card-parameters__tab">
+            <article class="card-parameters__tab-article">
+              <span class="card-parameters__tab-title">
+                <span class="btn-icon card-parameters__btn-icon btn-icon--rocket"></span>
+                <h5>Запуск:</h5>
+              </span>
+              <i class="card-parameters__btn-accordeon btn-accordeon btn-accordeon--filter js-accordeon-btn active"></i>
+              <ol class="card-parameters__custom-list custom-list active">
+                <li>Проверьте устройство на наличие повреждений.</li>
+                <li>Проверьте уровень масла и наличие воздушных фильтров.</li>
+                <li>Установите кнопку включения компрессора в положение "выключено" и подключите компрессор к электросети.</li>
+                <li>Теперь компрессор можно запустить!</li>
+              </ol>
+            </article>
+            <article class="card-parameters__tab-article">
+              <span class="card-parameters__tab-title">
+                <span class="btn-icon card-parameters__btn-icon btn-icon--info"></span>
+                <h5>Рекомендации:</h5>
+              </span>
+              <i class="card-parameters__btn-accordeon btn-accordeon btn-accordeon--filter js-accordeon-btn"></i>
+              <ul class="card-parameters__custom-list custom-list custom-list--disk">
+                <li>
+                  Заправленный маслом компрессор можно перевозить и использовать только в вертикальном положении.
+                </li>
+                <li>
+                  Компрессор должен работать в хорошо вентилируемых помещениях, при температуре от +3°C до +40°C.
+                </li>
+                <li>
+                  После хранения при температуре ниже 0°C, необходимо выдержать устройство при температуре более 5°C до достижения допустимого диапазона температур, но не менее 2 часов.
+                </li>
+                <li>
+                  В воздухе не должно содержаться пыли, паров кислот, взрывоопасных или легко восполаменяющихся газов.
+                </li>
+                <li>
+                  Допускается непрерывная работа компрессора (без остановки прессостатом) не более 15 мин, но не чаще одного раза в течение 2-х часов.
+                </li>
+                <li>
+                  При использовании удлинителя длина его кабеля не должна превышать 5 м, а его сечение должно соответствовать сечению кабеля компрессора.
+                </li>
+                <li>
+                  Если длина превышает 5 метров, то необходимо пропорционально увеличить сечение кабеля. Устанавливайте работающий компрессор на устойчивой горизонтальной поверхности - это гарантирует правильную смазку всех его узлов.
+                </li>
+              </ul>
+            </article>
+            <article class="card-parameters__tab-article">
+              <span class="card-parameters__tab-title">
+                <span class="btn-icon card-parameters__btn-icon btn-icon--tools"></span>
+                <h5>Обслуживание:</h5>
+              </span>
+              <i class="card-parameters__btn-accordeon btn-accordeon btn-accordeon--filter js-accordeon-btn"></i>
+              <ul class="card-parameters__custom-list custom-list custom-list--disk">
+                <li>
+                  В конце работы слейте конденсат, предварительно спустив давление до 0,3 Атм (сливной кран находится в нижней части ресивера).
+                </li>
+                <li>
+                  После первых 50ч работы проверьте усилие затяжки болтов поршневого блока (моменты затяжки указаны в инструкции).
+                </li>
+                <li>
+                  После первых 100ч работы и через каждые 300ч необходимо менять масло (по инструкции).
+                </li>
+                <li>
+                  Используйте масла вязкостью 100 мм2/с при 40°C, обычно это индексы: 100, P100, PD100, VCL100 и VDL100.
+                </li>
+                <li>
+                  Через каждые 600ч работы или чаще по результатам внешнего осмотра (появление загрязнения с внутренней стороны фильтрующего элемента или изменение его цвета) заменяйте всасывающий воздушный фильтр.
+                </li>
+                <li>
+                  Через каждые 1200ч работы или раз в год проводите обслуживание обратного клапана.
+                </li>
+                <li>
+                  Обслуживание заключается в чистке седла и клапана от загрязнений.
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div class="tab-box card-parameters__tab-box tab-box--card js-tab-btn">
+            <span class="tab-box__title-link tab-box__title-link--card" href="#">рейтинг | отзывы | вопросы</span>
           </div>
           <div class="tab-box card-parameters__tab-box">
             <span class="btn-icon btn-icon--white">

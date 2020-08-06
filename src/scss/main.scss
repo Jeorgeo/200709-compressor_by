@@ -336,32 +336,40 @@
   }
   &__tab {
     @include flex-row;
+    display: none;
     margin: 2em 0;
+    &.active {
+      display: flex;
+    }
   }
   &__tab-article {
     @include flex-row;
   }
   &__tab-title {
+    @include flex-row;
+    justify-content: flex-start;
     width: max-content;
-    max-width: 70%;
     margin: 0.5em 0;
     margin-right: 1em;
     text-align: left;
+    font-size: 17px;
   }
   &__tab-content {
-    display: none;
+    padding-left: 0;
     &.active {
       display: block;
     }
-    li {
-      position: relative;
-      z-index: 2;
-      @include flex-row;
-      flex-wrap: nowrap;
-      align-items: flex-start;
-      justify-content: space-between;
-      width: 100%;
-      font-size: 0.8em;
+    &--column {
+      li {
+        position: relative;
+        z-index: 2;
+        @include flex-row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        font-size: 0.8em;
+      }
     }
   }
   &__tab-list {
