@@ -353,6 +353,10 @@
     margin-right: 1em;
     text-align: left;
     font-size: 17px;
+    h4,
+    h5 {
+      margin: 0.5em 0;
+    }
   }
   &__tab-content {
     padding-left: 0;
@@ -395,6 +399,19 @@
       padding-right: 10px;
       background-color: #ffffff;
     }
+  }
+  &__rating {
+    margin-right: 10px;
+  }
+  &__rating-list {
+    li {
+      display: flex;
+    }
+  }
+  &__rating-medal {
+    width: 90px;
+    height: 90px;
+    margin: 0.5em 0;
   }
   &__tab-records {
     position: relative;
