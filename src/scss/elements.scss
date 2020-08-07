@@ -459,6 +459,19 @@
     background: url('../../img/icons/icon_tools.svg') no-repeat center;
     background-size: contain;
   }
+  &--vote-up {
+    width: 20px;
+    height: 20px;
+    background: url('../../img/icons/icon_vote.svg') no-repeat center;
+    background-size: contain;
+  }
+  &--vote-down {
+    width: 20px;
+    height: 20px;
+    background: url('../../img/icons/icon_vote.svg') no-repeat center;
+    background-size: contain;
+    transform: rotateZ(180deg);
+  }
 }
 
 /*-----------------------------Табы------------------------------*/

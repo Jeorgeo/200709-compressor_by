@@ -433,6 +433,11 @@
   &__tab-box {
     margin: 0.5em 0;
   }
+  &__text {
+    display: block;
+    margin: 1em 0;
+    text-align: center;
+  }
 }
 
 .card-upsale {
@@ -461,6 +466,88 @@
   &__catalog-card {
     display: block;
     margin: 1.5em 0;
+  }
+}
+
+/*------------------------Блок отзывы--------------------------*/
+
+.sorting {
+  @include flex-row;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 13px;
+  &__title {
+    display: block;
+  }
+  &__purpose {
+    @include flex-row;
+    justify-content: space-between;
+    width: calc(100% - 150px);
+  }
+  &__purpose-item {
+    padding-right: 15px;
+    &.active {
+      position: relative;
+      font-weight: bold;
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 10px;
+        height: 100%;
+        background: url('../../img/icons/btn_arrow-sort.svg') no-repeat center;
+        content: '';
+      }
+    }
+  }
+}
+
+.review {
+  padding: 1em;
+  border-top: 2px solid $basic-color-lgray;
+  border-bottom: 2px solid $basic-color-lgray;
+  &__title-box {
+    @include flex-row;
+    justify-content: space-between;
+  }
+  &__title {
+    display: block;
+    text-align: left;
+    h6 {
+      display: block;
+      margin: 0;
+      text-align: left;
+      text-transform: none;
+    }
+  }
+  &__date {
+    font-size: 13px;
+    color: $basic-color-gray;
+  }
+  &__content {
+    margin: 0.5em 0;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    font-style: italic;
+    border-bottom: 2px solid $basic-color-lgray;
+    p {
+      margin: 0;
+    }
+  }
+  &__vote {
+    @include flex-row;
+    justify-content: space-between;
+  }
+  &__vote-btn {
+    @include flex-row;
+    justify-content: space-between;
+    a {
+      @include flex-row;
+      justify-content: space-between;
+      width: 45px;
+      margin-left: 20px;
+    }
   }
 }
 
