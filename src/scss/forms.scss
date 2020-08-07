@@ -105,6 +105,26 @@
   }
 }
 
+/*---------------------Форма в карточке товара--------------------*/
+
+.tab-form {
+  padding-bottom: 1.5em;
+  border-bottom: 2px solid $basic-color-lgray;
+  &__input {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    color: $basic-color-gray;
+    border: none;
+    box-shadow: $basic-shadow;
+    box-sizing: border-box;
+  }
+  &__btn {
+    width: 100%;
+  }
+}
+
 /*---------------------------------------------------------------
 ## Popup-form *
 ----------------------------------------------------------------*/
