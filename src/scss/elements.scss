@@ -501,7 +501,6 @@
   &__title-link {
     display: block;
     width: calc(100% - 30px);
-    padding-left: 10px;
     text-transform: uppercase;
     font-family: 'Montserrat-Bold', 'Arial', sans-serif;
     font-size: 0.8em;
@@ -523,8 +522,13 @@
     &--card {
       font-size: 1em;
     }
-    &--card-upsale {
-      width: calc(100% - 40px);
+    &--with-icon {
+      //padding-left: 10px;
+      width: calc(100% - 30px);
+    }
+    &--with-img {
+      //padding-left: 10px;
+      width: calc(100% - 50px);
     }
   }
   &__text {

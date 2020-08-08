@@ -212,14 +212,12 @@
       position: absolute;
       @include flex-row;
       justify-content: space-between;
-      width: 90%;
-      max-width: 1600px;
+      width: 100%;
       &__tab-box {
         display: flex;
         width: 25%;
         max-width: 240px;
         min-height: 60px;
-        font-size: 0.7em;
       }
       &__search-box {
         position: relative;
@@ -261,6 +259,9 @@
   .flying-header {
     position: fixed;
     top: 30px;
+    width: 90%;
+    max-width: 1600px;
+    margin: auto;
     .fly-hidden {
       display: none;
     }
@@ -424,6 +425,31 @@
     }
   }
 
+  /*--------------------------------------------------------------
+  # elements * Отдельные блоки и элементы * 1024px
+  --------------------------------------------------------------*/
+
+  .tab-box {
+    &__title-link {
+      font-size: 0.9em;
+    }
+  }
+
+  /*--------------------------------------------------------------
+  # forms * Формы и элементы форм * 1024px
+  --------------------------------------------------------------*/
+
+  .filter-form {
+    &__btn {
+      width: auto;
+      margin: 1em;
+    }
+  }
+
+  /*--------------------------------------------------------------
+  # main-page * Основная  * 1024px
+  --------------------------------------------------------------*/
+
   .main-slider {
     height: 540px;
   }
@@ -489,13 +515,6 @@
     }
     &--desktop {
       display: block;
-    }
-  }
-
-  .filter-form {
-    &__btn {
-      width: auto;
-      margin: 1em;
     }
   }
 
@@ -649,7 +668,7 @@
     &__container {
       @include flex-row;
       align-items: stretch;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
     &__title-box {
       width: 100%;
@@ -661,6 +680,7 @@
     }
     &__slider-box {
       width: 45%;
+      margin-right: 5%;
       padding: 30px;
     }
     &__price-box {
@@ -722,25 +742,6 @@
     }
   }
 
-  .card-galery {
-    flex-direction: column;
-    &__img {
-      margin: 0.5em;
-    }
-    &__galery-slider {
-      flex-direction: column;
-    }
-    &__btn {
-      transform: rotateZ(90deg);
-    }
-  }
-
-  .title-box {
-    &__rating {
-      display: none;
-    }
-  }
-
   .card-parameters {
     position: relative;
     &__tabs {
@@ -753,11 +754,11 @@
       @include flex-row;
       justify-content: space-between;
       align-items: stretch;
+      width: 100%;
     }
     &__tab-box {
       &--fly {
         width: 24%;
-        font-size: 0.7em;
       }
       &--mobile {
         display: none;
@@ -767,6 +768,7 @@
       width: 70%;
       max-width: calc(100% - 460px);
       padding-right: 60px;
+      box-sizing: border-box;
     }
     &__tab-title {
       width: 100%;
@@ -789,9 +791,69 @@
         background-color: $basic-color-lgray;
         content: '';
       }
-
     }
   }
+
+  .card-galery {
+    flex-direction: column;
+    &__img {
+      margin: 0.5em auto;
+    }
+    &__galery-slider {
+      flex-direction: column;
+    }
+    &__slide {
+      margin: 1em 0;
+      text-align: center;
+    }
+    &__text {
+      position: relative;
+      font-weight: bolder;
+    }
+    &__btn {
+      transform: rotateZ(90deg);
+    }
+  }
+
+  .card-upsale {
+    &__tabs {
+      @include flex-row;
+      align-items: stretch;
+      justify-content: space-around;
+      max-width: 1048px;
+      margin: auto;
+      margin-bottom: 1em;
+    }
+    &__tab-box {
+      width: 32%;
+      max-width: 336px;
+      margin: 0;
+      margin-bottom: 1em;
+    }
+    &__cards-slider {
+      width: 90%;
+      max-width: 1335px;
+      margin: auto;
+      margin-bottom: 1em;
+      overflow-x: visible;
+    }
+    &__cards {
+      left: 0;
+      justify-content: space-around;
+      width: 100%;
+      padding: 0;
+    }
+    &__catalog-card {
+      margin: 1em 0;
+    }
+  }
+
+  .title-box {
+    &__rating {
+      display: none;
+    }
+  }
+
 
   /*--------------------------------------------------------------
   # Footer 1024px
@@ -981,6 +1043,72 @@
   /*--------------------------------------------------------------
   # Content 1366px
   --------------------------------------------------------------*/
+
+  /*------------------Card-product * 1366px ------------------------*/
+
+  .card-main {
+    &__slider-box {
+      justify-content: flex-end;
+      width: 52%;
+      margin-right: 60px;
+    }
+    &__price-box {
+      width: 45%;
+      max-width: 530px;
+    }
+  }
+
+  .slider-box {
+    &__column--galery {
+      width: 150px;
+      margin-left: 60px;
+    }
+  }
+
+  .price-box {
+    &__price {
+      width: 175px;
+    }
+    &__compare-box {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .services-box {
+    @include flex-row;
+    justify-content: flex-start;
+    width: 100%;
+    &__service {
+      margin: 1em 20px 1em 0;
+    }
+  }
+
+  .partners-prices {
+    flex-direction: column;
+    align-items: flex-start;
+    &__price {
+      margin: 0.5em 0;
+    }
+  }
+
+  .compare-box {
+    @include flex-row;
+    justify-content: space-between;
+    width: 100%;
+    &__link {
+      position: relative;
+      margin: 1em 0;
+      padding-left: 25px;
+      font-size: 16px;
+      font-weight: bolder;
+    }
+    &__btn-icon {
+      position: absolute;
+      left: 0;
+    }
+  }
 
   /*--------------------------------------------------------------
   # Footer 1366px

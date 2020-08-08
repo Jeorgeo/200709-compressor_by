@@ -276,6 +276,20 @@
   }
 }
 
+.card-galery {
+  &__galery-slider {
+    position: relative;
+  }
+  &__text {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-top: 0.7em;
+    text-align: center;
+  }
+}
+
 .price-box {
   position: relative;
   @include flex-row;
