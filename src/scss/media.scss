@@ -435,6 +435,10 @@
     }
   }
 
+  .sorting {
+    flex-wrap: nowrap;
+  }
+
   /*--------------------------------------------------------------
   # forms * Формы и элементы форм * 1024px
   --------------------------------------------------------------*/
@@ -744,6 +748,9 @@
 
   .card-parameters {
     position: relative;
+    &__column {
+      width: 48%;
+    }
     &__tabs {
       align-items: stretch;
       justify-content: flex-start;
@@ -773,6 +780,13 @@
     &__tab-title {
       width: 100%;
     }
+    &__tab-content {
+      @include flex-row;
+      justify-content: space-between;
+    }
+    &__tab-form {
+      width: 100%;
+    }
     &__btn-accordeon {
       display: none;
     }
@@ -790,6 +804,18 @@
         height: calc(100% - 60px);
         background-color: $basic-color-lgray;
         content: '';
+      }
+    }
+    &__rating-box {
+      @include flex-row;
+
+    }
+    &__rating-medal {
+      margin-right: 35px;
+    }
+    &__rating-list {
+      li {
+        margin: 12px 0;
       }
     }
   }
