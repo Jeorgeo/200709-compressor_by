@@ -772,8 +772,8 @@
       }
     }
     &__tab {
-      width: 70%;
-      max-width: calc(100% - 460px);
+      width: 80%;
+      max-width: calc(100% - 360px);
       padding-right: 60px;
       box-sizing: border-box;
     }
@@ -787,12 +787,21 @@
     &__tab-form {
       width: 100%;
     }
+    &__btn-box {
+      @include flex-row;
+      justify-content: flex-start;
+      width: 100%;
+      margin: 1em 0 2em 0;
+    }
+    &__btn {
+      margin-right: 2em;
+    }
     &__btn-accordeon {
       display: none;
     }
     &__card-galery {
       position: relative;
-      width: 30%;
+      width: 20%;
       max-width: 400px;
       padding-left: 60px;
       &::after {
@@ -805,6 +814,10 @@
         background-color: $basic-color-lgray;
         content: '';
       }
+    }
+    &__sorting {
+      width: 100%;
+      max-width: 400px;
     }
     &__rating-box {
       @include flex-row;
@@ -1016,6 +1029,85 @@
       margin: auto;
     }
   }
+
+  /*------------------Блоки и элементы---------------------------*/
+
+  .review {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__title-box {
+      flex-direction: column;
+      width: 18%;
+    }
+    &__date {
+      display: block;
+      margin: 5px 0;
+    }
+    &__content {
+      width: 50%;
+      margin: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+
+    }
+    &__vote {
+      justify-content: flex-end;
+      align-self: baseline;
+      width: 28%;
+    }
+    &__vote-btn {
+      margin-top: 1em;
+    }
+  }
+
+  /*------------------------------Формы--------------------------*/
+
+  .tab-form {
+    @include flex-row;
+    justify-content: space-between;
+    &__input {
+      width: calc(100% - 190px);
+    }
+    &__btn {
+      width: 170px;
+    }
+  }
+
+  /*------------------- Каталог детальная страница---------------*/
+
+  .card-parameters {
+    &__tab-form {
+
+    }
+    &__tab-title {
+      display: none;
+    }
+    &__tab-links {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: 45%;
+      max-width: 270px;
+    }
+    &__tab-link {
+      margin: .5em 0.5em .5em 0;
+      text-align: left;
+      font-size: 17px;
+      &.active {
+        color: $basic-color-blue;
+      }
+    }
+    &__tab-content {
+      position: relative;
+    }
+    &__sorting {
+      position: absolute;
+      top: -48px;
+      right: 0;
+    }
+  }
+
 
   /*--------------------------------------------------------------
   # Footer 1280px

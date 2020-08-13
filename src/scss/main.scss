@@ -388,6 +388,9 @@
       margin: 0.5em 0;
     }
   }
+  &__tab-links {
+    display: none;
+  }
   &__tab-content {
     padding-left: 0;
     &.active {
