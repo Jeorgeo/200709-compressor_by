@@ -752,19 +752,20 @@
       width: 48%;
     }
     &__tabs {
-      align-items: stretch;
-      justify-content: flex-start;
-    }
-    &__tabs-fly {
-      position: absolute;
+      position: relative;
       top: -74px;
       @include flex-row;
       justify-content: space-between;
       align-items: stretch;
       width: 100%;
+      input[type="radio"]:checked + label {
+        color: $basic-color-blue;
+        background-color: #ffffff;
+      }
     }
     &__tab-box {
       &--fly {
+        display: flex;
         width: 24%;
       }
       &--mobile {
@@ -833,6 +834,12 @@
     }
   }
 
+  #tab-btn-1:checked~#content-1,
+  #tab-btn-2:checked~#content-2,
+  #tab-btn-3:checked~#content-3 {
+    display: block!important;
+  }
+
   .card-galery {
     flex-direction: column;
     &__img {
@@ -892,6 +899,8 @@
       display: none;
     }
   }
+
+
 
 
   /*--------------------------------------------------------------

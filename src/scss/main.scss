@@ -360,9 +360,14 @@
   }
   &__tabs {
     @include flex-row;
+    input[type="radio"] {
+      display: none;
+    }
   }
-  &__tabs-fly {
-    display: none;
+  &__tab-box {
+    &--fly {
+      display: none;
+    }
   }
   &__tab {
     @include flex-row;
