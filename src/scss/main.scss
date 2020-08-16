@@ -10,13 +10,30 @@
 
 .main {
   width: 100%;
-  margin-top: 70px;
+  margin-top: 68px;
   &--gray {
     background-color: $basic-color-lgray;
   }
+  &--catalog-section {
+
+  }
 }
 
+/*--------------------------------------------------------------
+# submenu * Дополнительное меню для блоков
+--------------------------------------------------------------*/
 
+.section-menu {
+  &--mobile {
+    @include flex-row;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  &__tab-box {
+    width: max-content;
+    margin-bottom: 2em;
+  }
+}
 
 /*--------------------------------------------------------------
 # breadcrumbs * Хлебные крошки
@@ -78,6 +95,13 @@
 }
 
 .filter-box {
+  &__fieldset {
+    @include flex-row;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+  }
   &__runners {
     @include flex-row;
     justify-content: space-between;
@@ -106,14 +130,16 @@
   }
   &__checklist-list {
     display: none;
+    width: 100%;
     &.active {
       display: block;
     }
   }
   &__title {
     display: block;
-    width: calc(100% - 20px);
+    width: max-content;
     margin: 1em 0;
+    padding-right: 14px;
     font-weight: bold;
   }
   &__btn-accordeon {
@@ -697,4 +723,30 @@
     padding: 6px;
   }
 
+}
+
+/*---------------------Секция каталога-------------------------*/
+
+
+
+.catalog-section {
+  &__main {
+    position: static;
+  }
+  &__tabs {
+    position: relative;
+    padding: 2em 0;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 120%;
+      height: 2px;
+      background-color: $basic-color-lgray;
+      content: '';
+    }
+  }
+  &__tab-box {
+    margin: 0 0 1em 0;
+  }
 }

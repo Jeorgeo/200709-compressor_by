@@ -10,13 +10,19 @@ $(document).ready(function () {
     $('.js-tab-btn').not(this).removeClass('active').next().slideUp();
   });
 
+  $('.js-section-tab').click(function () {
+    $(this).toggleClass('active').next().slideToggle();
+    $('.js-section-tab').not(this).removeClass('active').next().slideUp();
+  });
+
   /**/
 
   let mobileMenu = document.querySelectorAll('.js-mobileMenu');
   let mobileSearch = document.querySelectorAll('.js-mobileSearch');
   let mobileContacts = document.querySelectorAll('.js-mobileContacts');
   let mobileProfile = document.querySelectorAll('.js-mobileProfile');
-  //let flyTab = document.querySelectorAll('.js-fly-tab');
+  let filterBtn = document.querySelectorAll('.js-filter-btn');
+  let filterTab = document.querySelector('.js-filter-tab');
   //let flyTabBtn = document.querySelectorAll('.js-fly-tab-btn');
 
   function moveTabMenu(item1, item2) {
@@ -49,6 +55,14 @@ mobileProfile[0].addEventListener('click', function(evt) {
   moveTabMenu(mobileProfile[0], mobileProfile[1]);
 });
 
+filterBtn[0].addEventListener('click', function(evt) {
+  evt.preventDefault();
+  moveTabMenu(filterBtn[0], filterTab);
+});
 
+filterBtn[1].addEventListener('click', function(evt) {
+  evt.preventDefault();
+  moveTabMenu(filterBtn[0], filterTab);
+});
 
 });

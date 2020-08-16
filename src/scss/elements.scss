@@ -165,6 +165,9 @@
       right: 0;
     }
   }
+  &--white {
+    background-color: #ffffff;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -474,6 +477,30 @@
   }
 }
 
+.btn-close {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 11px;
+  background-color: $basic-color-blue;
+  box-sizing: border-box;
+  &::after,
+  &::before {
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    width: 21px;
+    height: 3px;
+    transform: rotateZ(45deg);
+    background-color: #ffffff;
+    content: '';
+  }
+  &::before {
+    transform: rotateZ(-45deg);
+  }
+}
+
 /*-----------------------------Табы------------------------------*/
 
 .tab-box {
@@ -500,7 +527,7 @@
   }
   &__title-link {
     display: block;
-    width: calc(100% - 30px);
+    width: 100%;
     text-transform: uppercase;
     font-family: 'Montserrat-Bold', 'Arial', sans-serif;
     font-size: 0.8em;
@@ -529,6 +556,11 @@
     &--with-img {
       //padding-left: 10px;
       width: calc(100% - 50px);
+    }
+    &--catalog-section {
+      font-family: 'Montserrat','Arial',sans-serif;
+      font-size: 1em;
+      text-transform: none;
     }
   }
   &__text {
@@ -592,6 +624,11 @@
       border-bottom-left-radius: 0;
       transition: $basic-transition;
     }
+    &--arrow {
+      &::after {
+        background: url('../../img/icons/icon_arrow.svg') no-repeat center;
+      }
+    }
   }
   &--mobile {
     width: 100%;
@@ -608,9 +645,12 @@
   &--card {
     text-align: center;
   }
-  &--card-upsale {
+  &--white {
     color: $basic-color-gray;
     background-color: #ffffff;
+  }
+  &--catalog-section {
+    min-height: auto;
   }
 }
 

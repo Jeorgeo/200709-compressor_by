@@ -137,6 +137,14 @@ img {
   line-height: 1.5em;
 }
 
+.sub-title {
+  display: block;
+  font-size: 17px;
+  text-transform: uppercase;
+  @include font-bold;
+  font-weight: bold;
+}
+
 /* Для Chrome */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
