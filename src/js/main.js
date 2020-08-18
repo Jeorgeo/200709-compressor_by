@@ -15,6 +15,11 @@ $(document).ready(function () {
     $('.js-section-tab').not(this).removeClass('active').next().slideUp();
   });
 
+  $('.js-sorting-tab').click(function () {
+    $(this).next().slideToggle();
+    //$('.js-section-tab').not(this).removeClass('active').next().slideUp();
+  });
+
   /**/
 
   let mobileMenu = document.querySelectorAll('.js-mobileMenu');

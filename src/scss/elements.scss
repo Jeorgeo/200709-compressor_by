@@ -444,14 +444,14 @@
   &--rocket {
     width: 24px;
     height: 24px;
-    margin-right: 4px;
+    margin-right: 10px;
     background: url('../../img/icons/icon_rocket.svg') no-repeat center;
     background-size: contain;
   }
   &--info {
     width: 24px;
     height: 24px;
-    margin-right: 4px;
+    margin-right: 10px;
     background: url('../../img/icons/icon_info.svg') no-repeat center;
     background-size: contain;
   }
@@ -474,6 +474,34 @@
     background: url('../../img/icons/icon_vote.svg') no-repeat center;
     background-size: contain;
     transform: rotateZ(180deg);
+  }
+  &--attention {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background: url('../../img/icons/icon_attention.svg') no-repeat center;
+    background-size: contain;
+  }
+  &--question {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background: url('../../img/icons/icon_question.svg') no-repeat center;
+    background-size: contain;
+  }
+  &--plus {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background: url('../../img/icons/icon_plus.svg') no-repeat center;
+    background-size: contain;
+  }
+  &--minus {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background: url('../../img/icons/icon_minus.svg') no-repeat center;
+    background-size: contain;
   }
 }
 
@@ -971,6 +999,94 @@
     &--five {
       width: 105px;
     }
+  }
+}
+
+/*-----------------------# Sorting сортировка------------------------*/
+
+.sorting {
+  @include flex-row;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 13px;
+  &__title {
+    display: block;
+  }
+  &__purpose {
+    position: relative;
+    @include flex-row;
+    justify-content: space-between;
+    width: calc(100% - 120px);
+  }
+  &__purpose-item,
+  &__purpose-select {
+    padding: 0.5em 0;
+    padding-right: 15px;
+    &.active {
+      position: relative;
+      font-weight: bold;
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 10px;
+        height: 100%;
+        background: url('../../img/icons/btn_arrow-sort.svg') no-repeat center;
+        content: '';
+      }
+    }
+  }
+  &__purpose-select {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__fly-box {
+    position: absolute;
+    top: 36px;
+    left: -18px;
+    z-index: 7;
+    display: none;
+    width: 160px;
+    padding: 15px 0 15px 20px;
+    background-color: #ffffff;
+    box-shadow: $basic-shadow;
+  }
+  &__purpose-list {
+    @include flex-column;
+    align-items: flex-start;
+  }
+}
+
+/*----------------------#view виды карточек--------------------------*/
+
+.view {
+  position: relative;
+  font-size: 13px;
+  @include flex-row;
+  &__select-icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: 5px;
+    &--tile {
+      background: url('../../img/icons/icon_view-tile-dark.svg') no-repeat center;
+    }
+    &--table {
+      background: url('../../img/icons/icon_view-table-dark.svg') no-repeat center;
+    }
+  }
+  &__fly-box {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    z-index: 7;
+    display: none;
+    width: auto;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: $basic-shadow;
   }
 }
 
