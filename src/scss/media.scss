@@ -665,7 +665,7 @@
     }
   }
 
-  /*------------------Card-product * 1024px ------------------------*/
+  /*-------------catalog-product * 1024px * Карточка каталога----------------*/
 
   .card-main {
     padding-bottom: 60px;
@@ -885,7 +885,7 @@
     }
     &__cards {
       left: 0;
-      justify-content: space-around;
+      justify-content: space-between;
       width: 100%;
       padding: 0;
     }
@@ -896,6 +896,90 @@
 
   .title-box {
     &__rating {
+      display: none;
+    }
+  }
+
+  /*-------------catalog-section * 1024px * Секция каталога----------------*/
+
+  .catalog-section {
+    margin-top: 0;
+    padding-top: 60px;
+    padding-bottom: 0;
+    background-color: $basic-color-lgray;
+    &__wrapper {
+      position: relative;
+      @include flex-row;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 1600px;
+      margin: 0 auto;
+      &::after {
+        position: absolute;
+        top: -60px;
+        left: 340px;
+        z-index: 7;
+        width: 100%;
+        height: calc(100% + 60px);
+        background-color: #ffffff;
+        content: '';
+      }
+    }
+    &__tab-title {
+      display: block;
+      width: 100%;
+      margin: 0;
+      text-align: left;
+      text-transform: none;
+      font-size: 16px;
+    }
+    &__container {
+      width: 100%;
+    }
+    &__aside {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    &__content-side {
+      position: relative;
+      z-index: 8;
+      background-color: #ffffff;
+      width: calc(100% - 350px);
+      margin-bottom: 2em;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+    &__tabs {
+      @include flex-row;
+      align-items: stretch;
+      justify-content: flex-start;
+      width: 100%;
+      &::after {
+        display: none;
+      }
+    }
+    &__tab-box {
+      width: max-content;
+      max-width: 270px;
+      margin-right: 10px;
+    }
+    &__card-section {
+      background-color: #ffffff;
+    }
+  }
+
+  .section-menu {
+
+    &__tab-box {
+      display: none;
+    }
+  }
+
+  .aside {
+    &__btn-close {
       display: none;
     }
   }
@@ -1237,6 +1321,80 @@
     }
   }
 
+  .tab-box {
+    &__title-link {
+      font-size: 15px;
+    }
+  }
+
+  .sorting {
+    &__purpose-select {
+      display: none;
+    }
+    &__fly-box {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      box-shadow: none;
+    }
+    &__purpose-list {
+      @include flex-row;
+      width: 100%;
+    }
+    &__purpose-item {
+      padding: .5em 25px .5em 0;
+      &.active {
+        &::before {
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  .view {
+    &__select {
+      display: none;
+    }
+    &__fly-box {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: block;
+      box-shadow: none;
+    }
+    &__select-list {
+      @include flex-row;
+      width: 60px;
+    }
+    &__select-icon {
+      &--table {
+        &:hover {
+          background: url('../../img/icons/icon_view-table-blue.svg') center no-repeat;
+        }
+      }
+      &--tile {
+        &:hover {
+          background: url('../../img/icons/icon_view-tile-blue.svg') center no-repeat;
+        }
+      }
+
+    }
+  }
+
+  .catalog-section {
+    &__sorting {
+      width: 720px;
+    }
+    &__view {
+      width: 100px;
+    }
+    &__cards-slider {
+      overflow-x: visible;
+    }
+  }
+
   /*--------------------------------------------------------------
   # Footer 1366px
   --------------------------------------------------------------*/
@@ -1313,7 +1471,7 @@
   --------------------------------------------------------------*/
 
   .container {
-    max-width: 1600px;
+    max-width: 1400px;
   }
 
   /*--------------------------------------------------------------

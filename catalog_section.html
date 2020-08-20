@@ -301,9 +301,9 @@
   </header>
 
   <main class="main catalog-section">
-
-      <aside class="aside aside--filter js-filter-tab">
-        <div class="container aside__container">
+    <div class="catalog-section__wrapper">
+      <aside class="aside catalog-section__aside aside--filter js-filter-tab">
+        <div class="catalog-section__container catalog-section__container--aside">
           <span class="aside__title">
             <span class="aside__sub-title sub-title">
               Фильтр
@@ -896,10 +896,21 @@
               </div>
             </fieldset>
           </form>
+          <div class="btn-box aside__btn-box">
+            <a href="#" class="btn-box__btn btn">
+              Показать товары (351)
+            </a>
+            <a href="#" class="btn-box__btn btn btn--transparent-dark">
+              Расширенный фильтр
+            </a>
+            <a href="#" class="btn-box__link-filter link-filter">
+              Сбросить все фильтры
+            </a>
+          </div>
         </div>
       </aside>
-      <div class="content-side">
-        <div class="container">
+      <div class="content-side catalog-section__content-side">
+        <div class="catalog-section__container catalog-section__container--bside">
           <div class="breadcrumbs">
             <span class="breadcrumbs__item">
               <a href="#">Каталог товаров</a>
@@ -911,11 +922,14 @@
           </div>
         </div>
         <section class="catalog-section__tab-section">
-          <div class="container">
+          <div class="catalog-section__container catalog-section__container--bside">
             <h3 class="section-title catalog-section__section-title">
               поршневые компрессоры
             </h3>
             <div class="section-menu section-menu--mobile">
+              <h5 class="catalog-section__tab-title">
+                Быстрый подбор:
+              </h5>
               <div class="tab-box section-menu__tab-box tab-box--catalog-section js-filter-btn">
                 <span class="btn-icon btn-icon--white">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -973,11 +987,12 @@
                   <a class="tab-box__title-link tab-box__title-link--catalog-section" href="#">Fubag поршневой компрессор</a>
                 </div>
               </div>
+              <a href="" class="link-more slide-type02__link-more">Раскрыть все варианты</a>
             </div>
           </div>
         </section>
         <section class="catalog-section__card-section">
-          <div class="container">
+          <div class="catalog-section__container catalog-section__container--bside">
             <div class="display-panel">
               <span class="sorting catalog-section__sorting">
                 <span class="sorting__title">
@@ -1029,7 +1044,7 @@
               </span>
             </div>
           </div>
-          <div class="card-upsale__cards-slider">
+          <div class="catalog-section__cards-slider cards-slider">
             <div class="card-upsale__cards">
               <article class="catalog-card card-upsale__catalog-card">
                 <div class="catalog-card__top-part">
@@ -1763,14 +1778,14 @@
               </article>
             </div>
           </div>
-          <div class="container">
+          <div class="catalog-section__container catalog-section__container--bside">
             <div class="market-box">
               <span>
                 Рекламный блок
               </span>
             </div>
           </div>
-          <div class="card-upsale__cards-slider">
+          <div class="catalog-section__cards-slider">
             <div class="card-upsale__cards">
               <article class="catalog-card card-upsale__catalog-card">
                 <div class="catalog-card__top-part">
@@ -2506,7 +2521,7 @@
           </div>
         </section>
         <section class="catalog-section__card-info">
-          <div class="container">
+          <div class="catalog-section__container catalog-section__container--bside">
             <article class="card-parameters__tab-article">
               <span class="card-parameters__tab-title">
                 <span class="btn-icon card-parameters__btn-icon btn-icon--info"></span>
@@ -2595,6 +2610,7 @@
           </div>
         </section>
       </div>
+    </div>
   </main>
 
   <footer class="footer">

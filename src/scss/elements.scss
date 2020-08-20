@@ -231,6 +231,15 @@
       background-color: $basic-color-blue;
     }
   }
+  &--transparent-dark {
+    color: $basic-color-dark;
+    background-color: transparent;
+    border: 2px solid $basic-color-dark;
+    &:hover {
+      color: $basic-color-dark;
+      background-color: $basic-color-yellow;
+    }
+  }
 }
 
 .btn-small {
@@ -529,6 +538,12 @@
   }
 }
 
+.btn-box {
+  &__btn {
+    margin: 1em 0;
+  }
+}
+
 /*-----------------------------Табы------------------------------*/
 
 .tab-box {
@@ -555,7 +570,7 @@
   }
   &__title-link {
     display: block;
-    width: 100%;
+    width: max-content;
     text-transform: uppercase;
     font-family: 'Montserrat-Bold', 'Arial', sans-serif;
     font-size: 0.8em;
@@ -874,6 +889,29 @@
     &::after {
       right: -5px;
     }
+  }
+}
+
+.link-filter {
+  position: relative;
+  display: block;
+  width: 90%;
+  margin: auto;
+  padding: 0.5em;
+  padding-left: 40px;
+  color: $basic-color-blue;
+  box-sizing: border-box;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    display: block;
+    width: 20px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: url('../../img/icons/icon_update.svg') no-repeat center;
+    content: '';
   }
 }
 

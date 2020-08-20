@@ -703,6 +703,17 @@
 .catalog-section {
   position: static;
   padding-bottom: 2em;
+  &__container {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  &__aside {
+    position: absolute;
+    top: 68px;
+    left: -100%;
+    z-index: 8;
+  }
   &__card-section {
     padding: 1em 0;
     background-color: $basic-color-lgray;
@@ -720,6 +731,9 @@
       content: '';
     }
   }
+  &__tab-title {
+    display: none;
+  }
   &__tab-box {
     margin: 0 0 1em 0;
   }
@@ -728,6 +742,11 @@
   }
   &__view {
     width: 20%;
+  }
+  &__cards-slider {
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
   }
 }
 
