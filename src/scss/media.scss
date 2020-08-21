@@ -394,6 +394,9 @@
         fill: rgb(48,131,255);
       }
     }
+    &--mobile {
+      display: none;
+    }
   }
 
   /*--------------------------------------------------------------
@@ -900,6 +903,39 @@
     }
   }
 
+  .catalog-card {
+    &__top-part {
+      &--table {
+        width: 56%;
+        border-bottom: none;
+        border-right: 2px solid $basic-color-lgray;
+      }
+    }
+    &__bottom-part {
+      &--table {
+        width: 44%;
+      }
+    }
+    &__icons-box {
+      &--table {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 115px;
+
+      }
+    }
+    &--table {
+      @include flex-row;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 240px;
+      box-shadow: $basic-shadow;
+    }
+  }
+
+
+
   /*-------------catalog-section * 1024px * Секция каталога----------------*/
 
   .catalog-section {
@@ -949,7 +985,7 @@
       background-color: #ffffff;
       width: calc(100% - 350px);
       margin-bottom: 2em;
-      padding: 25px;
+      padding: 10px;
       box-sizing: border-box;
     }
     &__tabs {
@@ -968,6 +1004,11 @@
     }
     &__card-section {
       background-color: #ffffff;
+    }
+    &__catalog-card {
+      &--table {
+        margin: 10px;
+      }
     }
   }
 

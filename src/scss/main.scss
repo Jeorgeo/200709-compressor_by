@@ -610,10 +610,18 @@
 /*---------------------Карточка товара-------------------------*/
 
 .catalog-card {
+  position: relative;
   width: 247px;
   min-height: 570px;
   background-color: #ffffff;
   box-shadow: 4px 4px 20px rgba(0, 21, 53, 0.25);
+  &__row {
+
+  }
+  &__column {
+    width: 160px;
+    margin-left: 10px;
+  }
   &__top-part {
     @include flex-row;
     align-items: flex-start;
@@ -621,6 +629,10 @@
     padding: 30px;
     box-sizing: border-box;
     border-bottom: 2px solid $basic-color-lgray;
+    &--table {
+      justify-content: flex-start;
+      padding: 10px;
+    }
   }
   &__bottom-part {
     @include flex-row;
@@ -628,6 +640,10 @@
     justify-content: space-between;
     padding: 30px;
     box-sizing: border-box;
+    &--table {
+      padding: 10px;
+      padding-top: 15px;
+    }
   }
   &__image {
     display: block;
@@ -636,12 +652,20 @@
     margin-bottom: 1em;
     border: 2px solid $basic-color-lgray;
     box-sizing: border-box;
+    &--table {
+      width: 100px;
+      height: 100px;
+    }
   }
   &__raiting-box {
     @include flex-row;
     align-items: stretch;
     justify-content: center;
     width: 80px;
+    &--table {
+      justify-content: flex-start;
+      width: 160px;
+    }
   }
   &__rating-medal {
     width: 60px;
@@ -651,6 +675,11 @@
   &__price {
     width: 120px;
     font-size: 14px;
+    &--table {
+      @include flex-row;
+      justify-content: space-between;
+      width: 180px;
+    }
   }
   &__icons-box {
     @include flex-row;
@@ -663,9 +692,28 @@
     width: 100%;
     text-align: left;
     font-size: 12px;
+    &--table {
+      margin: 0.3em 0;
+    }
   }
   &__code {
     font-size: 12px;
+  }
+  &__descriptions {
+    &--table {
+      display: none;
+    }
+  }
+  &__icons-box {
+    &--table {
+      position: absolute;
+      top: 0;
+      right: 0;
+      flex-direction: column-reverse;
+      .btn-icon {
+        margin: 5px;
+      }
+    }
   }
   &__records {
     font-size: 11px;
@@ -695,6 +743,13 @@
     font-size: 12px;
     padding: 6px;
   }
+  &__basket-box {
+    width: 120px;
+  }
+  &--table {
+    width: 320px;
+    min-height: 240px;
+  }
 
 }
 
@@ -720,6 +775,7 @@
   }
   &__tabs {
     position: relative;
+    width: 100%;
     padding: 2em 0;
     &::after {
       position: absolute;
