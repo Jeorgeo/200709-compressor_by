@@ -1,0 +1,273 @@
+@import "parameters.scss";
+
+/*============== for PC(desktop) 1366px ===========================*/
+@media screen and (min-width: 1366px) {
+
+  /*--------------------------------------------------------------
+  # Typography 1366px
+  --------------------------------------------------------------*/
+  .container {
+    max-width: 1440px;
+  }
+  /*--------------------------------------------------------------
+  # Header 1366px
+  --------------------------------------------------------------*/
+
+  .header {
+    &-middle {
+      &__contacts-box {
+      }
+    }
+    &-bottom {
+      &__tab-box {
+        max-width: 256px;
+        font-size: 0.8em;
+      }
+      &__profile-box {
+      }
+      &__basket-box {
+        }
+      }
+    }
+
+    .logo-box {
+      h1 {
+        font-size: 1.2em;
+      }
+    }
+
+    .contacts-box {
+      &__item {
+        color: $basic-color-dark;
+      }
+    }
+
+  /*--------------------------------------------------------------
+  # Content 1366px
+  --------------------------------------------------------------*/
+
+  /*------------------Catalog * 1366px ------------------------*/
+
+  .catalog-card {
+    &__column {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: top;
+    }
+    &__row {
+      @include flex-row;
+      align-items: baseline;
+    }
+    &__code {
+      &--table {
+        width: 115px;
+      }
+    }
+    &__title {
+      &--table {
+        width: calc(100% - 115px);
+        margin: 0;
+      }
+    }
+    &__price {
+      &--table {
+        width: 115px;
+      }
+    }
+    &__descriptions {
+      &--table {
+        display: block;
+        width: calc(100% - 125px);
+      }
+    }
+    &__records {
+      &--table {
+        span {
+          display: block;
+        }
+      }
+    }
+    &__icons-box {
+      &--table {
+        left: 215px;
+      }
+    }
+  }
+
+  .catalog-section {
+    &__card-section {
+
+    }
+  }
+
+  /*------------------Card-product * 1366px ------------------------*/
+
+  .card-main {
+    &__slider-box {
+      justify-content: flex-end;
+      width: 52%;
+      margin-right: 60px;
+    }
+    &__price-box {
+      width: 45%;
+      max-width: 530px;
+    }
+  }
+
+  .slider-box {
+    &__column--galery {
+      width: 150px;
+      margin-left: 60px;
+    }
+  }
+
+  .price-box {
+    &__price {
+      width: 175px;
+    }
+    &__compare-box {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .services-box {
+    @include flex-row;
+    justify-content: flex-start;
+    width: 100%;
+    &__service {
+      margin: 1em 20px 1em 0;
+    }
+  }
+
+  .partners-prices {
+    flex-direction: column;
+    align-items: flex-start;
+    &__price {
+      margin: 0.5em 0;
+    }
+  }
+
+  .compare-box {
+    @include flex-row;
+    justify-content: space-between;
+    width: 100%;
+    &__link {
+      position: relative;
+      margin: 1em 0;
+      padding-left: 25px;
+      font-size: 16px;
+      font-weight: bolder;
+    }
+    &__btn-icon {
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  .tab-box {
+    &__title-link {
+      font-size: 15px;
+    }
+  }
+
+  .sorting {
+    &__purpose-select {
+      display: none;
+    }
+    &__fly-box {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      box-shadow: none;
+    }
+    &__purpose-list {
+      @include flex-row;
+      width: 100%;
+    }
+    &__purpose-item {
+      padding: .5em 25px .5em 0;
+      &.active {
+        &::before {
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  .view {
+    &__select {
+      display: none;
+    }
+    &__fly-box {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: block;
+      padding-right: 0;
+      box-shadow: none;
+    }
+    &__select-list {
+      @include flex-row;
+      width: 60px;
+    }
+    &__select-icon {
+      &--table {
+        &:hover {
+          background: url('../../img/icons/icon_view-table-blue.svg') center no-repeat;
+        }
+      }
+      &--tile {
+        &:hover {
+          background: url('../../img/icons/icon_view-tile-blue.svg') center no-repeat;
+        }
+      }
+
+    }
+  }
+
+  .catalog-section {
+    &__sorting {
+      width: 720px;
+    }
+    &__view {
+      width: 120px;
+    }
+    &__cards-slider {
+      overflow-x: visible;
+    }
+  }
+
+  /*--------------------------------------------------------------
+  # Footer 1366px
+  --------------------------------------------------------------*/
+
+  .footer {
+    &__coll {
+      width: 20%;
+      padding-left: 5%;
+      &--form {
+        position: relative;
+        hr {
+          display: none;
+        }
+        padding-left: 0;
+        padding-right: 5%;
+        //border-right: 2px solid #ffffff;
+        &::before {
+          position: absolute;
+          top: 2em;
+          right: 0;
+          display: block;
+          width: 2px;
+          height: calc(100% - 4em);
+          background-color: #ffffff;
+          content: '';
+        }
+      }
+    }
+  }
+}

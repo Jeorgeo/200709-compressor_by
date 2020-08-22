@@ -39,8 +39,13 @@ const styleFiles = [
   project + '/src/scss/elements.scss',
   project + '/src/scss/forms.scss',
   project + '/src/scss/header.scss',
+  project + '/src/scss/aside.scss',
   project + '/src/scss/main.scss',
   project + '/src/scss/footer.scss',
+  project + '/src/scss/media_mobile.scss',
+  project + '/src/scss/media_1024.scss',
+  project + '/src/scss/media_1280.scss',
+  project + '/src/scss/media_1366.scss',
   project + '/src/scss/media.scss'
 ]
 
