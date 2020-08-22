@@ -20,7 +20,18 @@ $(document).ready(function () {
     //$('.js-section-tab').not(this).removeClass('active').next().slideUp();
   });
 
-  /**/
+  $('.images-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true
+  });
+
+  /*------------------Slider Слайдер сертификатов--------------*/
+
+
 
   let mobileMenu = document.querySelectorAll('.js-mobileMenu');
   let mobileSearch = document.querySelectorAll('.js-mobileSearch');
