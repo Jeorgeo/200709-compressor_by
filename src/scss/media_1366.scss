@@ -46,6 +46,29 @@
   # Content 1366px
   --------------------------------------------------------------*/
 
+  /*------------------Main-page * 1366px-----------------------*/
+
+  .slide-type02 {
+    &__article {
+      width: calc(100% - 180px);
+      &--news {
+        width: 100%;
+      }
+    }
+    &__link-more {
+      width: 130px;
+    }
+    &__logo {
+      &--news {
+        width: 400px;
+        height: 400px;
+      }
+    }
+    &--news {
+      margin: 40px;
+    }
+  }
+
   /*------------------Catalog * 1366px ------------------------*/
 
   .catalog-card {

@@ -195,6 +195,7 @@
 }
 
 .slide-type02 {
+  position: relative;
   @include flex-column;
   text-align: center;
   &__date {
@@ -211,6 +212,7 @@
     color: $basic-color-blue;
   }
   &__title {
+    @include font-bold;
     font-size: 1.2em;
     p {
       margin: 0.8em 0;
@@ -221,6 +223,17 @@
     width: max-content;
     margin: 0.5em auto;
   }
+  &__fly-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  &--news {
+    padding-top: 120px;
+  }
+
 }
 
 .images-slider {

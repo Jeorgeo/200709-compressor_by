@@ -470,8 +470,10 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
+    padding-top: 0;
     &__aside {
       @include flex-row;
+      flex-wrap: nowrap;
       justify-content: space-between;
       width: auto;
       text-align: center;
@@ -485,6 +487,15 @@
       text-align: left;
       border-left: 3px solid $basic-color-lgray;
       box-sizing: border-box;
+      &--news {
+        align-items: flex-start;
+      }
+    }
+    &__fly-box {
+      position: static;
+      @include flex-row;
+      flex-wrap: nowrap;
+      text-align: left;
     }
     &__logo {
       position: relative;
@@ -496,18 +507,42 @@
         height: 100%;
         object-fit: cover;
       }
+      &--news {
+        width: 300px;
+        height: 300px;
+      }
     }
     &__date {
       margin: auto;
       padding: 0 3em;
       padding: 0 5em;
       font-size: 0.85em;
+      &--news {
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+      }
     }
     &__date-title {
       font-size: 60px;
     }
     &__title {
       text-align: left;
+      p {
+        margin: 1em 0;
+      }
+      &--news {
+        margin: 0;
+      }
+    }
+    &__link-more {
+      &--news {
+        margin-left: 0;
+      }
+    }
+    &--news {
+      align-items: flex-start;
+      margin: 30px 0;
     }
   }
 

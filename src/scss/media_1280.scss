@@ -117,6 +117,9 @@
     }
     &__date {
       margin: auto;
+      &--news {
+        margin-top: 0;
+      }
     }
   }
 
