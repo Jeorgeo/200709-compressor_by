@@ -219,6 +219,11 @@
       text-transform: none;
     }
   }
+  &__subtitle {
+    @include font-bold;
+    display: block;
+    width: 100%;
+  }
   &__link-more {
     width: max-content;
     margin: 0.5em auto;
@@ -265,6 +270,9 @@
     img {
       margin: auto;
     }
+  }
+  .slick-next, .slick-prev {
+    display: none;
   }
 }
 
@@ -822,6 +830,43 @@
 .display-panel {
   @include flex-row;
   justify-content: space-between;
+}
+
+/*----------------------Статьи и новости-----------------------*/
+
+.main-project {
+  &__title-box {
+    text-align: center;
+  }
+  &__title {
+    font-size: 1.85em;
+  }
+  &__subtitle {
+    display: block;
+    @include font-bold;
+    font-size: 16px;
+  }
+  &__date {
+    display: block;
+    margin: 1em auto;
+  }
+  &__article {
+    @include flex-column;
+  }
+  &__section-description {
+    display: block;
+  }
+}
+
+.project-slider {
+  width: 100%;
+  &__project-slide {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .slick-prev, .slick-next {
+    display: none;
+  }
 }
 
 /*---------------------Рекламный блок--------------------------*/

@@ -29,6 +29,23 @@ $(document).ready(function () {
     variableWidth: true
   });
 
+  $('.js-project-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  });
+
   /*------------------Slider Слайдер сертификатов--------------*/
 
 
