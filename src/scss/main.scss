@@ -29,6 +29,10 @@
   &__tab-box {
     width: max-content;
     margin-bottom: 2em;
+    &--full {
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 
@@ -824,6 +828,13 @@
     display: block;
     width: 100%;
     overflow-x: scroll;
+  }
+  &__logo-box {
+    @include flex-row;
+    flex-wrap: nowrap;
+  }
+  &__brand-logo {
+
   }
 }
 

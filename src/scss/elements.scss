@@ -608,6 +608,11 @@
       font-size: 1em;
       text-transform: none;
     }
+    &--full {
+      width: 100%;
+      font-size: 15px;
+      text-align: center;
+    }
   }
   &__text {
     padding-left: 10px;

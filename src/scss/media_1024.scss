@@ -945,6 +945,9 @@
       max-width: 270px;
       margin-right: 10px;
     }
+    &__logo-box {
+      justify-content: space-between;
+    }
     &__card-section {
       background-color: #ffffff;
     }
@@ -1031,6 +1034,9 @@
     }
     img {
       margin: auto;
+    }
+    &--brands {
+      padding: 1em 80px;
     }
   }
 

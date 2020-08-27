@@ -20,6 +20,7 @@ $(document).ready(function () {
     //$('.js-section-tab').not(this).removeClass('active').next().slideUp();
   });
 
+if (document.querySelector('.images-slider')) {
   $('.images-slider').slick({
     dots: false,
     infinite: true,
@@ -28,7 +29,9 @@ $(document).ready(function () {
     centerMode: true,
     variableWidth: true
   });
+}
 
+if (document.querySelector('.js-project-slider')) {
   $('.js-project-slider').slick({
     dots: false,
     infinite: true,
@@ -45,6 +48,27 @@ $(document).ready(function () {
       }
     ]
   });
+}
+
+if (document.querySelector('.js-brand-slider')) {
+  $('.js-brand-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  });
+}
+
 
   /*------------------Slider Слайдер сертификатов--------------*/
 

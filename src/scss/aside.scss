@@ -18,7 +18,7 @@
   //justify-content: space-between;
   width: 95%;
   max-width: 340px;
-  padding: 20px;
+  padding: 10px 0;
   box-sizing: border-box;
   transition: $basic-transition;
   &__container {
@@ -41,12 +41,17 @@
   &__filter-form {
     width: 100%;
   }
-  &--filter {
-    background-color: $basic-color-lgray;
+  &__list-item {
+    margin: 0.5em 0;
+    &.active,
+    &:hover {
+      a {
+        font-weight: bold;
+        color: $basic-color-blue;
+      }
+    }
   }
-  &.active {
-    left: 0;
-  }
+
   &__btn-box {
     //position: absolute;
     //top: 70vh;
@@ -55,6 +60,12 @@
     width: 100%;
     max-width: 340px;
     //padding: 0 20px;
+    background-color: $basic-color-lgray;
+  }
+  &.active {
+    left: 0;
+  }
+  &--filter {
     background-color: $basic-color-lgray;
   }
 }
