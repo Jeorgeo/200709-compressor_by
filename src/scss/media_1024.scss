@@ -21,6 +21,14 @@
     }
   }
 
+  .section {
+    padding-bottom: 2em;
+  }
+
+  .main-project {
+    margin-bottom: 2em;
+  }
+
 
   /*--------------------------------------------------------------
   # Header 1024px
@@ -1023,6 +1031,41 @@
     }
     img {
       margin: auto;
+    }
+  }
+
+  .post {
+    @include flex-row;
+    &__image {
+      &--type-01 {
+        width: 330px;
+        margin-right: 30px;
+      }
+
+    }
+    &__content {
+      &--type-01 {
+        width: calc(100% - 360px);
+        text-align: left;
+      }
+    }
+    &__title {
+      &--type-01 {
+        margin-top: 0;
+        text-align: left;
+      }
+    }
+    &__list {
+      @include flex-row;
+      flex-wrap: nowrap;
+    }
+    &__list-item {
+      &--margin-full {
+        margin: 0 20px;
+      }
+    }
+    &--type-01 {
+      align-items: flex-start;
     }
   }
 

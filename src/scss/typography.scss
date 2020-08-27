@@ -127,8 +127,12 @@ img {
 
 .section {
   padding: 1em 0;
+  background-color: #ffffff;
   &--gray {
     background-color: $basic-color-lgray;
+  }
+  &--last {
+    padding-bottom: 4em;
   }
 }
 
