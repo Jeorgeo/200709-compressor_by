@@ -881,6 +881,9 @@
 }
 
 .post {
+  &__subtitle {
+    @include font-bold;
+  }
   &__list {
   }
   &__list-item {

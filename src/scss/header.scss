@@ -169,14 +169,29 @@
     a {
       margin-left: 10px;
     }
+    &--partners {
+      margin-right: 40px;
+      font-size: 1em;
+      color: $basic-color-dark;
+    }
   }
   &__btn-icon {
     path {
-      fill: rgb(125, 133, 145);
+      fill: rgb(48,131,255);
     }
   }
   &.active {
     left: 20px;
+  }
+  &--mobile {
+
+  }
+  &--static {
+    @include flex-row;
+    justify-content: flex-start;
+    max-width: 100%;
+    padding: 20px 0;
+    box-shadow: none;
   }
 }
 

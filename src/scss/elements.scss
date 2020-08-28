@@ -410,6 +410,11 @@
       fill: rgb(254,198,1);
     }
   }
+  &--margin {
+    &--10 {
+      margin: 0 10px;
+    }
+  }
   &--count {
     margin-right: 10px;
   }
