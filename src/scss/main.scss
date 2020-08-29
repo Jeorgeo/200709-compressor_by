@@ -900,6 +900,10 @@
     &--type-03 {
       margin-right: 10px;
     }
+    &--type-04 {
+      width: 200px;
+      margin-right: 20px;
+    }
   }
   &__attention {
     display: block;
@@ -912,6 +916,10 @@
       &.active {
         display: block;
       }
+    }
+    &--type-04 {
+      width: 100%;
+      border-bottom: 2px solid $basic-color-lgray;
     }
   }
   &__list-item {
@@ -929,6 +937,11 @@
     }
     &--type-03 {
       padding: 3px 0;
+    }
+    &--type-04 {
+      @include flex-row;
+      padding-top: 14px;
+      border-top: 2px solid $basic-color-lgray;
     }
   }
   &__text {
@@ -951,6 +964,11 @@
     font-style: normal;
     line-height: normal;
     color: $basic-color-lgray;
+  }
+  &__link-more {
+    &--type-04 {
+      margin: 1.5em auto;
+    }
   }
 }
 
