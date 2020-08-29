@@ -940,6 +940,43 @@
   }
 }
 
+/*----------------------Faq------------------------------------*/
+
+.faq-box {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 24px 24px 24px 60px;
+  &__title {
+    display: block;
+    text-align: left;
+    margin: 0;
+    &.active {
+      color: $basic-color-blue;
+    }
+  }
+  &__subtitle {
+    display: block;
+    margin: 10px 0;
+    margin-top: 20px;
+    @include font-bold;
+
+  }
+  &__btn-accordeon {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
+  &__content {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &--gray {
+    background-color: $basic-color-lgray;
+  }
+}
+
 /*---------------------Рекламный блок--------------------------*/
 
 .market-box {

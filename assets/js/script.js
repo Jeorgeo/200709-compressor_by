@@ -15,10 +15,18 @@ $(document).ready(function () {
     $('.js-section-tab').not(this).removeClass('active').next().slideUp();
   });
 
+  $('.js-faq-btn').click(function () {
+    $(this).toggleClass('active').next().slideToggle();
+    $(this).prev().toggleClass('active');
+    $('.js-faq-btn').not(this).removeClass('active').next().slideUp();
+  });
+
   $('.js-sorting-tab').click(function () {
     $(this).next().slideToggle();
     //$('.js-section-tab').not(this).removeClass('active').next().slideUp();
   });
+
+
 
 if (document.querySelector('.images-slider')) {
   $('.images-slider').slick({
