@@ -881,21 +881,61 @@
 }
 
 .post {
+  &__row {
+
+  }
+  &__column {
+    &--type-03 {
+      margin-top: 10px;
+    }
+  }
+  &__title {
+    &--type-03 {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
   &__subtitle {
     @include font-bold;
+    &--type-03 {
+      margin-right: 10px;
+    }
+  }
+  &__attention {
+    display: block;
+    text-align: center;
   }
   &__list {
+    &--type-03 {
+      display: none;
+      margin-top: 10px;
+      &.active {
+        display: block;
+      }
+    }
   }
   &__list-item {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding-left: 40px;
-    p {
+    &--type-01 {
       position: relative;
-      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      padding-left: 40px;
+      p {
+        position: relative;
+        z-index: 2;
+      }
+    }
+    &--type-03 {
+      padding: 3px 0;
+    }
+  }
+  &__text {
+    &--type-03 {
+      p {
+        margin: 10px 0;
+      }
     }
   }
   &__enumeration {

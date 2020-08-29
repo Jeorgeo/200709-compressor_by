@@ -1040,6 +1040,16 @@
 
   .post {
     @include flex-row;
+    &__row {
+      @include flex-row;
+      align-items: flex-start;
+    }
+    &__column {
+      &--type-03 {
+        width: 200px;
+        margin-right: 30px;
+      }
+    }
     &__image {
       &--type-01 {
         width: 330px;
@@ -1065,11 +1075,17 @@
     &__list {
       @include flex-row;
       flex-wrap: nowrap;
+      &--type-03 {
+        display: block;
+      }
     }
     &__list-item {
       &--margin-full {
         margin: 0 20px;
       }
+    }
+    &__btn-accordeon {
+      display: none;
     }
     &--type-01 {
       align-items: flex-start;
