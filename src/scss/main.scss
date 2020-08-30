@@ -605,20 +605,6 @@
       margin: 0;
     }
   }
-  &__vote {
-    @include flex-row;
-    justify-content: space-between;
-  }
-  &__vote-btn {
-    @include flex-row;
-    justify-content: space-between;
-    a {
-      @include flex-row;
-      justify-content: space-between;
-      width: 45px;
-      margin-left: 20px;
-    }
-  }
 }
 
 .questions {
@@ -875,6 +861,9 @@
     padding: 10px;
     box-sizing: border-box;
   }
+  &__figcaption {
+    @include font-bold;
+  }
   .slick-prev, .slick-next {
     display: none;
   }
@@ -1011,11 +1000,13 @@
 .faq-box {
   position: relative;
   margin-bottom: 20px;
-  padding: 24px 24px 24px 60px;
+  padding: 24px 24px 24px 40px;
+  background-color: #ffffff;
   &__title {
     display: block;
-    text-align: left;
     margin: 0;
+    text-align: left;
+    @include font-bold;
     &.active {
       color: $basic-color-blue;
     }
@@ -1030,13 +1021,19 @@
   &__btn-accordeon {
     position: absolute;
     top: 25px;
-    left: 25px;
+    left: 13px;
   }
   &__content {
     display: none;
+    margin-top: 12px;
+    border-top: 2px solid $basic-color-lgray;
     &.active {
       display: block;
     }
+  }
+  &__review-vote {
+    padding: 12px 0;
+    border-top: 2px solid $basic-color-lgray;
   }
   &--gray {
     background-color: $basic-color-lgray;

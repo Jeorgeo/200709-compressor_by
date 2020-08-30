@@ -77,6 +77,25 @@ if (document.querySelector('.js-brand-slider')) {
   });
 }
 
+if (document.querySelector('.js-faq-slider')) {
+  $('.js-faq-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  });
+}
+
 
   /*------------------Slider Слайдер сертификатов--------------*/
 

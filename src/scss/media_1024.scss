@@ -1137,6 +1137,30 @@
     }
   }
 
+  .faq-box {
+    &__content {
+      &--type-01 {
+        @include flex-row;
+        align-items: flex-start;
+        display: none;
+        &.active {
+          display: flex;
+        }
+      }
+    }
+    &__text {
+      &--type-01 {
+        width: calc(100% - 150px);
+      }
+    }
+    &__review-vote {
+      &--type-01 {
+        width: 150px;
+        border: none; 
+      }
+    }
+  }
+
 
   /*--------------------------------------------------------------
   # Footer 1024px

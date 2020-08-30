@@ -484,13 +484,27 @@
     height: 20px;
     background: url('../../img/icons/icon_vote.svg') no-repeat center;
     background-size: contain;
+    &--gray {
+      background: url('../../img/icons/icon_vote-g.svg') no-repeat center;
+      background-size: contain;
+      &:hover {
+        background: url('../../img/icons/icon_vote.svg') no-repeat center;
+      }
+    }
   }
   &--vote-down {
     width: 20px;
     height: 20px;
-    background: url('../../img/icons/icon_vote.svg') no-repeat center;
+    background: url('../../img/icons/icon_vote-g.svg') no-repeat center;
     background-size: contain;
     transform: rotateZ(180deg);
+    &--gray {
+      background: url('../../img/icons/icon_vote-g.svg') no-repeat center;
+      background-size: contain;
+      &:hover {
+        background: url('../../img/icons/icon_vote.svg') no-repeat center;
+      }
+    }
   }
   &--attention {
     width: 24px;
@@ -551,6 +565,29 @@
     margin: 1em 0;
   }
 }
+
+/*------------------------vote-btn-------------------------------*/
+
+.review-vote {
+  @include flex-row;
+  justify-content: space-between;
+  &__btn {
+    @include flex-row;
+    justify-content: space-between;
+    a {
+      @include flex-row;
+      justify-content: space-between;
+      width: 45px;
+      margin-left: 20px;
+    }
+    &--type-01 {
+      a {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
 
 /*-----------------------------Табы------------------------------*/
 

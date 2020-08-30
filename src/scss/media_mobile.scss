@@ -59,6 +59,37 @@
   # Content 640px
   --------------------------------------------------------------*/
 
+  /*--------------------faq-form------------------------*/
+
+  .faq-form {
+    @include flex-row;
+    justify-content: space-between;
+    &__sub-title {
+      width: 100%;
+    }
+    &__label {
+      width: 210px;
+      margin-right: 20px;
+      &--question {
+        width: 550px;
+      }
+    }
+    &__input {
+      margin-bottom: 15px;
+      box-shadow: 3px 3px 10px rgba(82, 109, 150, 0.2);
+      &--question {
+        height: 40px;
+        min-height: 0;
+      }
+    }
+    &__btn {
+      width: 130px;
+      padding: 10px;
+      margin: 0;
+      margin-top: 14px;
+    }
+  }
+
   /*--------------------------------------------------------------
   # Footer 640px
   --------------------------------------------------------------*/

@@ -9,6 +9,33 @@
 --------------------------------------------------------------*/
 
 /*---------------------------------------------------------------
+## all-forms *
+----------------------------------------------------------------*/
+
+.label {
+  @include flex-row;
+  width: 100%;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  margin: 0.5em 0;
+  padding: 10px;
+  color: $basic-color-gray;
+  border: none;
+  box-sizing: border-box;
+}
+
+.input-name {
+  @include font-bold;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+/*---------------------------------------------------------------
 ## search-form *
 ----------------------------------------------------------------*/
 
@@ -122,6 +149,32 @@
   }
   &__btn {
     width: 100%;
+  }
+}
+
+/*---------------------------------------------------------------
+## faq-form *
+----------------------------------------------------------------*/
+
+.faq-form {
+  font-size: 0.85em;
+  &__sub-title {
+    margin: 1em;
+    text-align: center;
+  }
+  &__label {
+  }
+  &__input {
+    margin-bottom: 15px;
+    padding: 12px;
+    box-shadow: 3px 3px 10px rgba(82, 109, 150, 0.2);
+    &--question {
+      min-height: 80px;
+    }
+  }
+  &__btn {
+    width: 100%;
+    margin: 10px 0 1.5em 0;
   }
 }
 
