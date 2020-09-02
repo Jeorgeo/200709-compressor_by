@@ -1148,8 +1148,23 @@
 /*------------------------Сервис-центр * Catalog-service------------------*/
 
 .catalog-service {
+  background-color: #ffffff;
   &__tab-box {
     margin: 10px 0;
+    &--fly {
+      display: none;
+    }
+  }
+  &__tab {
+    &--fly {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+  &__tabs {
+
   }
 }
 

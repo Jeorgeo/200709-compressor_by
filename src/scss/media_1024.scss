@@ -971,6 +971,43 @@
     }
   }
 
+  /*------------------------Сервис-центр * Catalog-service------------------*/
+
+  .catalog-service {
+    background-color: $basic-color-lgray;
+    &__tabs-box {
+      @include flex-row;
+      justify-content: center;
+      align-items: center;
+      input[type="radio"]:checked + label {
+        color: #3083ff;
+        background-color: #fff;
+      }
+    }
+    &__tab-box {
+      &--fly {
+        display: flex;
+        width: max-content;
+        margin-top: -50px;
+      }
+    }
+    &__tab {
+      &--fly {
+        display: none;
+        &.active {
+          display: none;
+        }
+      }
+    }
+    &__section-title {
+      &--fly {
+        margin-bottom: 60px;
+      }
+    }
+
+  }
+
+
   /*----------------------Статьи и новости-----------------------*/
 
   .main-project {
