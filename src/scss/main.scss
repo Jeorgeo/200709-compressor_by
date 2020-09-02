@@ -494,6 +494,13 @@
       width: 700px;
     }
   }
+  &__paragraph {
+    padding-left: 34px;
+    p {
+      margin: 0;
+      margin-bottom: 1em;
+    }
+  }
   &__rating {
     margin-right: 10px;
   }
@@ -1136,6 +1143,12 @@
   iframe {
     border: none;
   }
+}
+
+/*------------------------Сервис-центр * Catalog-service------------------*/
+
+.catalog-service {
+  
 }
 
 /*---------------------Рекламный блок--------------------------*/

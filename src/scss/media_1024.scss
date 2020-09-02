@@ -942,6 +942,9 @@
       width: max-content;
       max-width: 270px;
       margin-right: 10px;
+      &--full {
+        max-width: max-content;
+      }
     }
     &__logo-box {
       justify-content: space-between;
