@@ -957,7 +957,6 @@
   }
 
   .section-menu {
-
     &__tab-box {
       display: none;
     }
@@ -1156,8 +1155,35 @@
     &__review-vote {
       &--type-01 {
         width: 150px;
-        border: none; 
+        border: none;
       }
+    }
+  }
+
+  /*---------------------------Контакты-----------------------------*/
+
+  .main-contact {
+    &__row {
+      @include flex-row;
+      align-items: stretch;
+      justify-content: space-between;
+    }
+    &__contact-box {
+      @include flex-row;
+      align-items: flex-start;
+      width: 32%;
+    }
+    &__map {
+      height: 550px;
+    }
+    &__video-box {
+      height: 300px;
+    }
+  }
+
+  .contact-box {
+    &__aside {
+      height: 60px;
     }
   }
 

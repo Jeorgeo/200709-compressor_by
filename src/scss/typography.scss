@@ -144,7 +144,9 @@ img {
 .section-subtitle {
   margin: 0;
   padding: 2em 0 1em 0;
-  border-top: 2px solid $basic-color-lgray;
+  &--border-top {
+    border-top: 2px solid $basic-color-lgray;
+  }
 }
 
 .sub-title {

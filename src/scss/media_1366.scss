@@ -283,6 +283,43 @@
     }
   }
 
+  /*---------------------Contacts Контакты-----------------------*/
+
+  .contact-box {
+    @include flex-row;
+    flex-wrap: nowrap;
+    &__aside {
+      @include flex-row;
+      align-items: center;
+      width: 70px;
+      height: 100%;
+      padding: 60px 14px;
+    }
+    &__bside {
+      @include flex-row;
+      align-items: center;
+      height: 100%;
+      &--social {
+        padding: 60px 24px;
+      }
+    }
+    &__title {
+      text-align: left;
+    }
+    &__icon-box {
+      margin: 15px 0;
+    }
+    &__content {
+      display: block;
+      width: 100%;
+      text-align: left;
+      &--social {
+        margin: 0;
+      }
+      //margin: 15px 0;
+    }
+  }
+
   /*--------------------------------------------------------------
   # Footer 1366px
   --------------------------------------------------------------*/
