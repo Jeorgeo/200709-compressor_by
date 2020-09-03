@@ -1168,6 +1168,56 @@
   }
 }
 
+/*---------------------Карточка сервис-центра * service-card------------------*/
+
+.service-card {
+  //position: relative;
+  @include flex-row;
+  align-items: stretch;
+  width: 100%;
+  min-height: 230px;
+  margin: 1em 0;
+  padding: 20px;
+  border: 2px solid $basic-color-lgray;
+  box-sizing: border-box;
+  &__aside {
+    @include flex-column;
+    justify-content: space-between;
+    width: 85px;
+    min-height: 185px;
+    margin-right: 14px;
+  }
+  &__img {
+    width: 84px;
+    height: 84px;
+    padding: 2px;
+    border: 2px solid $basic-color-lgray;
+    box-sizing: border-box;
+  }
+  &__bside {
+    @include flex-row;
+    align-items: stretch;
+    width: calc(100% - 99px);
+  }
+  &__title {
+    text-align: left;
+    margin: 0;
+  }
+  &__code {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 16px;
+    font-size: 13px;
+  }
+  &__btn-box {
+    display: block;
+    width: 100%;
+    padding-top: 18px;
+    border-top: 2px solid $basic-color-lgray;
+  }
+}
+
 /*---------------------Рекламный блок--------------------------*/
 
 .market-box {

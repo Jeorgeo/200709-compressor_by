@@ -161,6 +161,48 @@
   # Content 720px
   --------------------------------------------------------------*/
 
+  .service-card {
+    position: relative;
+    align-items: center;
+    min-height: auto;
+    &__aside {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 185px;
+      height: 85px;
+      min-height: 85px;
+    }
+    &__bside {
+      flex-wrap: nowrap;
+      align-items: stretch;
+      width: calc(100% - 199px);
+    }
+    &__content {
+      position: relative;
+      min-height: 85px;
+      &::after {
+        position: absolute;
+        top: -20px;
+        right: 0;
+        display: block;
+        width: 2px;
+        height: calc(100% + 40px);
+        background-color: $basic-color-lgray;
+        content: '';
+      }
+    }
+    &__btn-box {
+      align-self: center;
+      padding-top: 0;
+      padding-left: 20px;
+      border: none;
+    }
+    &__btn {
+      width: 200px;
+    }
+  }
+
   /*--------------------------------------------------------------
   # Footer 720px
   --------------------------------------------------------------*/

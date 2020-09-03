@@ -132,6 +132,33 @@
   }
 }
 
+/*---------------------------------------------------------------
+## catalog-form * Форма в структуре каталога
+----------------------------------------------------------------*/
+
+.catalog-form {
+  margin: 25px 0;
+  padding: 30px 20px;
+  border: 2px solid $basic-color-lgray;
+  &__input {
+    margin: 20px 0;
+    box-shadow: 3px 3px 10px rgba(82,109,150,.2);
+  }
+  &__radiobutton {
+    margin-top: 0;
+    @include font-bold;
+  }
+  &__btn {
+    width: 100%;
+    padding: 11px;
+    &.disabled {
+      color: #ffffff;
+      background-color: $basic-color-gray;
+      border: 2px solid $basic-color-gray;
+    }
+  }
+}
+
 /*---------------------Форма в карточке товара--------------------*/
 
 .tab-form {

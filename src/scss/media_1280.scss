@@ -228,6 +228,27 @@
     }
   }
 
+  .service-card {
+    &__aside {
+      margin-right: 0;
+    }
+    &__bside {
+      width: calc(100% - 189px);
+    }
+    &__content {
+      width: calc(100% - 300px);
+      min-height: auto;
+      padding: 12px 20px;
+      box-sizing: border-box;
+    }
+    &__btn-box {
+      width: 300px;
+      padding-left: 50px;
+      padding-right: 30px;
+      box-sizing: border-box;
+    }
+  }
+
   /*------------------Блоки и элементы---------------------------*/
 
   .review {
