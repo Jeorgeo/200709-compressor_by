@@ -88,8 +88,6 @@
     }
   }
 
-
-
   /*--------------------------------------------------------------
   # Content 1280px
   --------------------------------------------------------------*/
@@ -120,6 +118,72 @@
       &--news {
         margin: 0;
       }
+    }
+  }
+
+  /*------------------------Сервис-центр * Catalog-service------------------*/
+
+  .catalog-service {
+    &__catalog-details {
+      width: calc(100% - 800px);
+    }
+    &__catalog-table {
+      width: 800px;
+    }
+  }
+
+  .catalog-table {
+    &__column {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: nowrap;
+      &--01 {
+        width: 45px;
+      }
+      &--02 {
+        width: 440px;
+      }
+      &--03 {
+        width: 90px;
+      }
+      &--04 {
+        width: 200px;
+      }
+    }
+    &__head {
+      align-items: center;
+      padding: 0;
+    }
+    &__body {
+      height: 375px;
+      padding: 0;
+    }
+    &__item {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+    &__spare {
+      align-items: center;
+      padding: 10px 0;
+    }
+    &__spare-code {
+      width: 75px;
+    }
+    &__spare-title {
+      width: 285px;
+    }
+    &__spare-presence {
+      width: 80px;
+    }
+    &__spare-quantity {
+      padding-left: 0;
+    }
+    &__btn {
+      margin-right: 20px;
     }
   }
 

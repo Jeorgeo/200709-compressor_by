@@ -1178,6 +1178,10 @@
 
 .catalog-service {
   background-color: #ffffff;
+  &__subtitle {
+    font-size: 1.4em;
+    margin: 1em 0;
+  }
   &__tab-box {
     margin: 10px 0;
     &--fly {
@@ -1195,6 +1199,10 @@
   &__tabs {
 
   }
+  &__catalog-details {
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
   &__details {
     padding: 15px;
     border: 2px solid $basic-color-lgray;
@@ -1206,7 +1214,9 @@
 }
 
 .catalog-table {
-  font-size: 12px;
+  &__table {
+    font-size: 12px;
+  }
   &__item {
     display: inline-block;
     vertical-align: top;
@@ -1216,7 +1226,7 @@
     @include flex-row;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 5px;
+    padding: 5px 5%;
     @include font-bold;
     background-color: $basic-color-lgray;
     box-sizing: border-box;
@@ -1231,8 +1241,9 @@
     justify-content: flex-start;
     padding: 17px 5px;
     background-color: #ffffff;
+    padding: 10px 5%;
     box-sizing: border-box;
-
+    border-bottom: 2px solid $basic-color-lgray;
   }
   &__column {
     @include flex-column;
@@ -1249,7 +1260,7 @@
     }
     &--04 {
       width: 90px;
-      padding: 0 5px;
+      //padding: 0 5px;
       box-sizing: border-box;
     }
   }

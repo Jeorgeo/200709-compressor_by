@@ -9,6 +9,7 @@
   --------------------------------------------------------------*/
 
   .container {
+    width: 90%;
     position: relative;
     .xl-15 {
       width: 15%;
@@ -881,8 +882,6 @@
     }
   }
 
-
-
   /*-------------catalog-section * 1024px * Секция каталога----------------*/
 
   .catalog-section {
@@ -981,6 +980,12 @@
 
   .catalog-service {
     background-color: $basic-color-lgray;
+    &__row {
+      @include flex-row;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+      width: 100%;
+    }
     &__tabs-box {
       @include flex-row;
       justify-content: center;
@@ -998,26 +1003,13 @@
       }
     }
     &__tab {
+      width: 100%;
       &--fly {
         display: none;
         &.active {
           display: none;
         }
       }
-    }
-    &__section-title {
-      &--fly {
-        margin-bottom: 60px;
-      }
-    }
-
-  }
-
-  /*---------------------сервис-центр * catalog-service-------------------*/
-
-  .catalog-service {
-    &__tab {
-      width: 100%;
     }
     &__catalog-search {
       @include flex-row;
@@ -1029,6 +1021,16 @@
       width: 49%;
       box-sizing: border-box;
     }
+    &__catalog-details {
+      padding: 10px;
+      width: 40%;
+    }
+    &__catalog-table {
+      margin-top: 0;
+      padding: 10px;
+      width: 60%;
+      box-sizing: border-box;
+    }
     &__service-card {
       transition: $basic-transition;
       &:hover {
@@ -1036,9 +1038,19 @@
         border-color: transparent;
       }
     }
+    &__section-title {
+      &--fly {
+        margin-bottom: 60px;
+      }
+    }
+
   }
 
-
+  .catalog-table {
+    &__table {
+      border: 2px solid $basic-color-lgray;
+    }
+  }
 
 
   /*----------------------Статьи и новости-----------------------*/

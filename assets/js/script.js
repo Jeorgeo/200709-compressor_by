@@ -165,14 +165,22 @@ mobileProfile[0].addEventListener('click', function(evt) {
   moveTabMenu(mobileProfile[0], mobileProfile[1]);
 });
 
-filterBtn[0].addEventListener('click', function(evt) {
-  evt.preventDefault();
-  moveTabMenu(filterBtn[0], filterTab);
-});
 
-filterBtn[1].addEventListener('click', function(evt) {
-  evt.preventDefault();
-  moveTabMenu(filterBtn[0], filterTab);
-});
+if (filterBtn[0]) {
+
+  console.log(filterBtn[0]);
+  filterBtn[0].addEventListener('click', function(evt) {
+    evt.preventDefault();
+    moveTabMenu(filterBtn[0], filterTab);
+  });
+}
+
+if (filterBtn[1]) {
+  filterBtn[1].addEventListener('click', function(evt) {
+    evt.preventDefault();
+    moveTabMenu(filterBtn[0], filterTab);
+  });
+}
+
 
 });

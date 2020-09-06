@@ -101,6 +101,9 @@ img {
   width: 90%;
   max-width: 1280px;
   margin: 0 auto;
+  &--full-table {
+    width: 100%;
+  }
 }
 
 /*Сетка
