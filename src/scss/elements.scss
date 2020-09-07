@@ -1232,3 +1232,38 @@
     }
   }
 }
+
+.advantages {
+  background-color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  &__item {
+    @include flex-column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 0;
+    text-align: center;
+    border-bottom: 2px solid $basic-color-lgray;
+    box-sizing: border-box;
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  &__icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 10px 0;
+    border-radius: 50%;
+    background-color: $basic-color-blue;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  &__text {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

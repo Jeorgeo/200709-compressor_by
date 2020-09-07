@@ -30,6 +30,10 @@
     margin-bottom: 2em;
   }
 
+  .desk-hidden {
+    display: none;
+  }
+
 
   /*--------------------------------------------------------------
   # Header 1024px
@@ -1049,6 +1053,86 @@
   .catalog-table {
     &__table {
       border: 2px solid $basic-color-lgray;
+    }
+  }
+
+/*-----------------Cервис-центр главная* catalog-service main-----------------*/
+
+  .service-steps {
+    @include flex-row;
+    align-items: stretch;
+    &__sub-title {
+      width: 100%;
+    }
+    &__step {
+      position: relative;
+      margin-left: 150px;
+      padding: 40px;
+      &::after {
+        position: absolute;
+        top: 0;
+        left: -150px;
+        display: block;
+        width: 170px;
+        height: 100%;
+        text-align: center;
+        color: $basic-color-lgray;
+        font-size: 160px;
+        line-height: 110px;
+        @include font-bold;
+      }
+      &--01 {
+        &::after {
+          content: '1';
+        }
+      }
+      &--02 {
+        width: calc(50% - 150px);
+        &::after {
+          content: '2';
+        }
+      }
+      &--03 {
+        width: calc(50% - 150px);
+        &::after {
+          content: '3';
+        }
+      }
+    }
+  }
+
+  .service-form {
+    @include flex-row;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    &__input {
+      height: 40px;
+    }
+    &__cl {
+      margin-right: 20px;
+      &--01 {
+        width: 300px;
+      }
+      &--02 {
+        width: 210px;
+      }
+      &--03 {
+        width: 260px;
+      }
+      &--04 {
+        width: 200px;
+      }
+      &--05 {
+        width: 100px;
+      }
+      &--06 {
+        width: 100%;
+        max-width: 930px;
+      }
+    }
+    &__btn {
+      margin-right: 0;
+      padding: 9px;
     }
   }
 

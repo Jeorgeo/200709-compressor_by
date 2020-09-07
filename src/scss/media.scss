@@ -55,6 +55,16 @@
     }
   }
 
+  .service-form {
+    justify-content: space-between;
+    &__input {
+      height: 40px;
+    }
+    &__cl {
+      margin-right: 0;
+    }
+  }
+
 
 
   /*--------------------------------------------------------------

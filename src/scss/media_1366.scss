@@ -279,6 +279,28 @@
     }
   }
 
+
+  .service-steps {
+    &__step {
+      @include flex-row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      &--02 {
+        width: calc(65% - 150px);
+      }
+      &--03 {
+        width: calc(35% - 150px);
+      }
+    }
+    &__step-content {
+      width: 55%;
+    }
+    &__step-map {
+      width: 45%;
+    }
+
+  }
+
 /*----------------------Статьи и новости-----------------------*/
 
   .post {
