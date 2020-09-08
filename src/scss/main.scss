@@ -888,11 +888,56 @@
     &--type-01 {
       border: 2px solid $basic-color-lgray;
     }
+    &--type-02 {
+      padding: 16px;
+    }
   }
   &__figure {
     //display: flex;
     //justify-content: center;
     //align-items: center;
+  }
+  &__sertificate {
+    box-shadow: 2px 2px 15px rgba(0, 21, 53, 0.25);
+  }
+  &__brand-box {
+    @include flex-column;
+    align-items: stretch;
+    justify-content: space-around;
+    height: 240px;
+  }
+  &__info-box {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+    background-color: #ffffff;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      object-fit: cover;
+    }
+    &::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 4;
+      margin: auto;
+      display: block;
+      width: 90px;
+      height: 70px;
+      background: url('../../img/bg/bg_img.svg') no-repeat center;
+      background-size: cover;
+      opacity: 0.4;
+      content: '';
+    }
   }
   &__figcaption {
     @include font-bold;
@@ -1178,6 +1223,12 @@
 
 .catalog-service {
   background-color: #ffffff;
+  &__section {
+    padding-bottom: 40px;
+  }
+  &__section-title {
+    margin: 20px 0;
+  }
   &__subtitle {
     font-size: 1.4em;
     margin: 1em 0;
@@ -1212,7 +1263,7 @@
     padding: 10px 0;
   }
   &__advantages {
-
+    box-shadow: 3px 3px 10px rgba(82, 109, 150, 0.2);
   }
 }
 

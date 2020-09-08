@@ -187,6 +187,38 @@
     }
   }
 
+  .advantages {
+    padding: 0;
+    &__item {
+      width: 25%;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      &:nth-child(odd),
+      &:nth-child(even) {
+        &::after {
+          position: absolute;
+          top: 20px;
+          right: -1px;
+          width: 2px;
+          height: calc(100% - 40px);
+          background-color: $basic-color-lgray;
+          //border-right: 2px solid #eef0f4;
+          content: '';
+        }
+      }
+      &:nth-child(4n) {
+        &::after {
+          display: none;
+        }
+      }
+      &:nth-child(5),
+      &:nth-child(6) {
+        border: none;
+      }
+    }
+  }
+
   /*-------------------Catalog * Каталог--------------------------*/
 
   .catalog-card {

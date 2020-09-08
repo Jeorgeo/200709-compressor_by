@@ -166,6 +166,37 @@
     }
   }
 
+  .advantages {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: stretch;
+    &__item {
+      position: relative;
+      width: 50%;
+      padding: 0 15px;
+      box-sizing: border-box;
+      &:nth-child(7) {
+        //margin-bottom: 15px;
+        //border-bottom: 2px solid #eef0f4;
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      &:nth-child(odd) {
+        &::after {
+          position: absolute;
+          top: 5px;
+          right: -1px;
+          width: 2px;
+          height: calc(100% - 25px);
+          background-color: $basic-color-lgray;
+          //border-right: 2px solid #eef0f4;
+          content: '';
+        }
+
+      }
+    }
+  }
+
   /*--------------------------------------------------------------
   # Footer 640px
   --------------------------------------------------------------*/
