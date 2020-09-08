@@ -938,6 +938,14 @@
       opacity: 0.4;
       content: '';
     }
+    &--gray {
+      background-color: $basic-color-lgray;
+      &::after {
+        background: url('../../img/bg/bg_img-w.svg') no-repeat center;
+        background-size: cover;
+        opacity: 1;
+      }
+    }
   }
   &__figcaption {
     @include font-bold;
@@ -1265,6 +1273,16 @@
   &__advantages {
     box-shadow: 3px 3px 10px rgba(82, 109, 150, 0.2);
   }
+  &__btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 1.5em auto 0 auto;
+  }
+  &__table-box {
+    &--type-02 {
+      overflow-x: scroll;
+    }
+  }
 }
 
 .catalog-table {
@@ -1333,7 +1351,44 @@
   &__link {
     color: $basic-color-blue;
   }
+}
 
+.service-table {
+  border-collapse: collapse;
+  &__row {
+    &--head {
+      @include font-bold;
+      background-color: $basic-color-lgray;
+      &--type-02 {
+        background-color: #ffffff;
+      }
+    }
+  }
+  &__column {
+    padding: 14px 10px;
+    text-align: left;
+    border: 2px solid $basic-color-lgray;
+    box-sizing: border-box;
+    &--01 {
+      width: 65%;
+    }
+    &--02 {
+      width: 35%;
+    }
+    &--03 {
+      width: 45%;
+    }
+    &--04 {
+      width: 65%;
+    }
+    &--type-02 {
+      border: 2px solid #ffffff;
+    }
+  }
+  &--type-02 {
+    width: 100%;
+    min-width: 640px;
+  }
 }
 
 /*------------------Cервис-центр главная* catalog-service main----------------*/

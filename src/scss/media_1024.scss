@@ -1067,6 +1067,27 @@
     }
   }
 
+  .service-table {
+
+    &__column {
+      padding: 14px 30px;
+      &--01 {
+        width: calc(100% - 200px);
+        border-right: none;
+      }
+      &--02 {
+        width: 200px;
+        border-left: none;
+      }
+      &--03 {
+        width: 50%;
+      }
+      &--04 {
+        width: 50%;
+      }
+    }
+  }
+
 /*-----------------Cервис-центр главная* catalog-service main-----------------*/
 
   .service-steps {
