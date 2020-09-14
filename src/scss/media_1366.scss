@@ -30,17 +30,30 @@
       }
     }
 
-    .logo-box {
-      h1 {
-        font-size: 1.2em;
-      }
+  .logo-box {
+    h1 {
+      margin: 0;
+      margin-bottom: 7px;
+      font-size: 1.2em;
     }
+  }
 
-    .contacts-box {
-      &__item {
-        color: $basic-color-dark;
-      }
+  .contacts-box {
+    &__item {
+      color: $basic-color-dark;
     }
+  }
+
+  .flying-header {
+    &::before {
+      left: -25%;
+      width: 150%;
+    }
+    &::after {
+      left: -25%;
+      width: 150%;
+    }
+  }
 
   /*--------------------------------------------------------------
   # Content 1366px
@@ -385,4 +398,6 @@
       }
     }
   }
+
+
 }

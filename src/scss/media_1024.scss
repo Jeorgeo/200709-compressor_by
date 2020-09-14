@@ -41,6 +41,18 @@
 
   .header {
     position: relative;
+    padding-bottom: 30px;
+    &::before {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      z-index: 9;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $basic-color-lgray;
+      content: '';
+    }
     &-top {
       position: relative;
       top: 0;
@@ -49,18 +61,7 @@
       @include flex-row;
       justify-content: space-between;
       width: 100%;
-      border-bottom: 1px solid $basic-color-lgray;
       box-shadow: none;
-      &::after {
-        position: absolute;
-        top: 100%;
-        left: -50%;
-        display: block;
-        width: 200%;
-        height: 1px;
-        background-color: $basic-color-lgray;
-        content: '';
-      }
       &__navigation-box {
         padding: 0;
       }
@@ -135,7 +136,7 @@
     position: fixed;
     top: 30px;
     width: 90%;
-    max-width: 1600px;
+    max-width: 1400px;
     margin: auto;
     .fly-hidden {
       display: none;
@@ -175,7 +176,7 @@
         background-color: transparent;
       }
       &__logo-box {
-        display: none;
+        display: block;
       }
     }
   }
