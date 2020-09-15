@@ -76,54 +76,22 @@ IncludeTemplateLangFile(__FILE__);
 	          <a class="tab-box__title-link tab-box__title-link--with-icon tab-box__title-link tab-box__title-link--with-icon--mobile" href="#">Сервисный центр</a>
 	        </div>
 	        <nav class="navigation-box header-top__navigation-box">
-	            <ul class="main-menu main-menu_top">
-	                <li class="parent main-menu__parent">
-	                  <a href="#">Сертификаты</a>
-	                  <i class="main-menu__btn-accordeon btn-accordeon js-accordeon-btn"></i>
-	                </li>
-	                <i class="vl main-menu__vl"></i>
-	                <li class="parent main-menu__parent">
-	                  <a href="#">Наши проекты</a>
-	                  <i class="main-menu__btn-accordeon btn-accordeon js-accordeon-btn"></i>
-	                </li>
-	                <i class="vl main-menu__vl"></i>
-	                <li class="parent main-menu__parent">
-	                  <a href="#">Отзывы</a>
-	                  <i class="main-menu__btn-accordeon btn-accordeon js-accordeon-btn"></i>
-	                </li>
-	                <i class="vl main-menu__vl"></i>
-	                <li class="parent main-menu__parent active">
-	                  <a href="#">О компании</a>
-	                  <i class="main-menu__btn-accordeon btn-accordeon active js-accordeon-btn"></i>
-	                  <ul class="main-menu__has-childs has-childs">
-	                    <li>
-	                      <a href="#">О нас</a>
-	                    </li>
-	                    <li>
-	                      <a href="#">Бренды</a>
-	                    </li>
-	                    <li>
-	                      <a href="#">Сотрудничество</a>
-	                    </li>
-	                    <li>
-	                      <a href="#">Вакансии</a>
-	                    </li>
-	                    <li>
-	                      <a href="#">Реквизиты</a>
-	                    </li>
-	                  </ul>
-	                </li>
-	                <i class="vl main-menu__vl"></i>
-	                <li class="parent main-menu__parent">
-	                  <a href="#">Информация</a>
-	                  <i class="main-menu__btn-accordeon btn-accordeon js-accordeon-btn"></i>
-	                </li>
-	                <i class="vl main-menu__vl"></i>
-	                <li class="parent main-menu__parent">
-	                  <a href="#">Контакты</a>
-	                  <i class="main-menu__btn-accordeon btn-accordeon js-accordeon-btn"></i>
-	                </li>
-	            </ul>
+						<?$APPLICATION->IncludeComponent(
+							"bitrix:menu",
+							"compressor_main-menu",
+							Array(
+								"ALLOW_MULTI_SELECT" => "N",
+								"CHILD_MENU_TYPE" => "left",
+								"DELAY" => "N",
+								"MAX_LEVEL" => "2",
+								"MENU_CACHE_GET_VARS" => array(""),
+								"MENU_CACHE_TIME" => "3600",
+								"MENU_CACHE_TYPE" => "N",
+								"MENU_CACHE_USE_GROUPS" => "Y",
+								"ROOT_MENU_TYPE" => "main",
+								"USE_EXT" => "N"
+							)
+						);?>
 	        </nav>
 	      </div>
 	      <div class="header-mobile header-middle">
