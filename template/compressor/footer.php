@@ -110,54 +110,63 @@
         <h4 class="footer__title">
           Каталог товаров
         </h4>
-        <ul class="footer__catalog-menu">
-          <li><a href="#">Поршневые компрессоры</a></li>
-          <li><a href="#">Ременные компрессоры</a></li>
-          <li><a href="">Коаксиальные компрессоры</a></li>
-          <li><a href="">Винтовые компрессоры</a></li>
-          <li><a href="">Передвижные компрессоры</a></li>
-          <li><a href="">Дожимные компрессоры</a></li>
-          <li><a href="">Подготовка воздуха</a></li>
-          <li><a href="">Пневмоинструмент и оснастка</a></li>
-          <li><a href="">Запчасти</a></li>
-        </ul>
-        <a href="" class="link-more footer__link-more link-more--white">
-          Посмотреть все товары
-        </a>
-        <a class="link footer__link" href="#">
-          Карта сайта
-        </a>
-        <a class="link footer__link" href="#">
-          Политика конфиденциальности
-        </a>
+        <? $APPLICATION->IncludeComponent(
+                "bitrix:main.include",
+                "",
+                Array(
+                  "AREA_FILE_SHOW" => "file",
+                  "PATH" => "/include/footer_catalog-menu.php"
+                  )
+                );
+         ?>
+        <div class="link-more footer__link-more link-more--white">
+          <? $APPLICATION->IncludeComponent(
+                  "bitrix:main.include",
+                  "",
+                  Array(
+                    "AREA_FILE_SHOW" => "file",
+                    "PATH" => "/include/link-catalog.php"
+                    )
+                  );
+           ?>
+        </div>
+        <div class="link footer__link">
+          <? $APPLICATION->IncludeComponent(
+                  "bitrix:main.include",
+                  "",
+                  Array(
+                    "AREA_FILE_SHOW" => "file",
+                    "PATH" => "/include/site-map.php"
+                    )
+                  );
+           ?>
+        </div>
+        <div class="link footer__link">
+          <? $APPLICATION->IncludeComponent(
+                  "bitrix:main.include",
+                  "",
+                  Array(
+                    "AREA_FILE_SHOW" => "file",
+                    "PATH" => "/include/link-policy.php"
+                    )
+                  );
+           ?>
+        </div>
       </div>
       <div class="footer__coll">
         <h4 class="footer__title">
           Покупателям
         </h4>
-        <ul class="footer__site-menu">
-          <li><a href="#">Бренды</a></li>
-          <li><a href="#">Полезно знать</a></li>
-          <li><a href="#">Частые вопросы</a></li>
-          <li>
-            <a href="#">Оплата и доставка</a>
-            <ul class="child">
-              <li><a href="">Как заказать</a></li>
-              <li><a href="">Гарантия качества</a></li>
-              <li><a href="">Кредит и рассрочка</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="">О компании</a>
-            <ul class="child">
-              <li><a href="">Интернет магазин</a></li>
-              <li><a href="">Реквизиты</a></li>
-              <li><a href="">Система рейтинга</a></li>
-            </ul>
-          </li>
-          <li><a href="">Новости</a></li>
-          <li><a href="">Контакты</a></li>
-        </ul>
+        <!-- Меню футора !-->
+        <? $APPLICATION->IncludeComponent(
+                "bitrix:main.include",
+                "",
+                Array(
+                  "AREA_FILE_SHOW" => "file",
+                  "PATH" => "/include/footer_info-menu.php"
+                  )
+                );
+         ?>
       </div>
     </div>
   </footer>
