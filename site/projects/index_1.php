@@ -19,7 +19,7 @@ $APPLICATION->SetTitle("Title");
  <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"cm_news-list_project",
-	array(
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -39,10 +39,7 @@ $APPLICATION->SetTitle("Title");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array("",""),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => $_REQUEST["ID"],
@@ -50,7 +47,7 @@ $APPLICATION->SetTitle("Title");
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "3",
+		"NEWS_COUNT" => "5",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -61,10 +58,7 @@ $APPLICATION->SetTitle("Title");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array("",""),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -76,10 +70,8 @@ $APPLICATION->SetTitle("Title");
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "cm_news-list_project"
-	),
-	false
+		"STRICT_SECTION_CHECK" => "N"
+	)
 );?>
 
  </main>
