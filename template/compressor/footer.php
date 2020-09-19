@@ -110,15 +110,23 @@
         <h4 class="footer__title">
           Каталог товаров
         </h4>
-        <? $APPLICATION->IncludeComponent(
-                "bitrix:main.include",
-                "",
-                Array(
-                  "AREA_FILE_SHOW" => "file",
-                  "PATH" => "/include/footer_catalog-menu.php"
-                  )
-                );
-         ?>
+        <? /* Меню каталога */?>
+        <?$APPLICATION->IncludeComponent(
+          "bitrix:menu",
+          "cm_footer-catalog-menu",
+          Array(
+            "ALLOW_MULTI_SELECT" => "N",
+            "CHILD_MENU_TYPE" => "",
+            "DELAY" => "N",
+            "MAX_LEVEL" => "1",
+            "MENU_CACHE_GET_VARS" => array(""),
+            "MENU_CACHE_TIME" => "3600",
+            "MENU_CACHE_TYPE" => "N",
+            "MENU_CACHE_USE_GROUPS" => "Y",
+            "ROOT_MENU_TYPE" => "footer_catalog",
+            "USE_EXT" => "N"
+          )
+        );?>
         <div class="link-more footer__link-more link-more--white">
           <? $APPLICATION->IncludeComponent(
                   "bitrix:main.include",
@@ -157,16 +165,23 @@
         <h4 class="footer__title">
           Покупателям
         </h4>
-        <!-- Меню футора !-->
-        <? $APPLICATION->IncludeComponent(
-                "bitrix:main.include",
-                "",
+        <? /* Меню покупателям */?>
+        <?$APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                "cm_footer-info-menu",
                 Array(
-                  "AREA_FILE_SHOW" => "file",
-                  "PATH" => "/include/footer_info-menu.php"
-                  )
-                );
-         ?>
+                  "ALLOW_MULTI_SELECT" => "N",
+                  "CHILD_MENU_TYPE" => "tree_menu",
+                  "DELAY" => "N",
+                  "MAX_LEVEL" => "2",
+                  "MENU_CACHE_GET_VARS" => array(""),
+                  "MENU_CACHE_TIME" => "3600",
+                  "MENU_CACHE_TYPE" => "N",
+                  "MENU_CACHE_USE_GROUPS" => "Y",
+                  "ROOT_MENU_TYPE" => "footer_info",
+                  "USE_EXT" => "N"
+                )
+              );?>
       </div>
     </div>
   </footer>

@@ -17,8 +17,7 @@ if(empty($arResult))
 	return "";
 	//$strReturn = '';
 
-	$strReturn = '<div class="container">';
-	$strReturn .= '<div class="breadcrumbs">';
+	$strReturn = '<div class="breadcrumbs">';
 	$strReturn .= '<span class="breadcrumbs__item">';
 	$strReturn .= '<a href="/">Главная</a></span>';
 
@@ -47,6 +46,6 @@ if(empty($arResult))
 		}
 	}
 
-	$strReturn .= '</div></div>';
+	$strReturn .= '</div>';
 
 return $strReturn;

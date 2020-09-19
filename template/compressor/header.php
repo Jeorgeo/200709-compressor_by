@@ -29,7 +29,7 @@ IncludeTemplateLangFile(__FILE__);
 	<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css">
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/assets/js/maskedinput.js"></script>
+	<!--<script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/assets/js/maskedinput.js"></script>!-->
 	<?$APPLICATION->ShowHead();?>
 	<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/jquery-migrate-3.3.1/jquery.min.js"></script>!-->
 	<!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>!-->
@@ -77,15 +77,23 @@ IncludeTemplateLangFile(__FILE__);
 	          </span>
 	          <a class="tab-box__title-link tab-box__title-link--with-icon tab-box__title-link tab-box__title-link--with-icon--mobile" href="#">Сервисный центр</a>
 	        </div>
-					<? $APPLICATION->IncludeComponent(
-									"bitrix:main.include",
-									"",
-									Array(
-										"AREA_FILE_SHOW" => "file",
-										"PATH" => "/include/main-menu.php"
-										)
-									);
-					 ?>
+					<? /* Главное меню */?>
+					<?$APPLICATION->IncludeComponent(
+						"bitrix:menu",
+						"cm_main-menu",
+						Array(
+							"ALLOW_MULTI_SELECT" => "N",
+							"CHILD_MENU_TYPE" => "sub_menu",
+							"DELAY" => "N",
+							"MAX_LEVEL" => "2",
+							"MENU_CACHE_GET_VARS" => array(""),
+							"MENU_CACHE_TIME" => "3600",
+							"MENU_CACHE_TYPE" => "N",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"ROOT_MENU_TYPE" => "main",
+							"USE_EXT" => "N"
+						)
+					);?>
 	      </div>
 	      <div class="header-mobile header-middle">
 	        <span class="btn-small header-mobile__btn-small btn-small--menu js-mobileMenu">

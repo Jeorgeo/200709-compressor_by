@@ -87,7 +87,7 @@ if (document.querySelector('.js-info-slider')) {
   });
 }
 
-if (document.querySelector('.js-project-slider')) {
+//if (document.querySelector('.js-project-slider')) {
   $('.js-project-slider').slick({
     dots: false,
     infinite: true,
@@ -104,7 +104,7 @@ if (document.querySelector('.js-project-slider')) {
       }
     ]
   });
-}
+//}
 
 if (document.querySelector('.js-brand-slider')) {
   $('.js-brand-slider').slick({

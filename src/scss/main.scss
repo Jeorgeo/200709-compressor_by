@@ -953,6 +953,25 @@
   .slick-prev, .slick-next {
     opacity: 0;
   }
+  .slick-dots {
+    @include flex-row;
+    justify-content: center;
+    li {
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin: 1em 3px;
+      font-size: 0;
+      background-color: $basic-color-lgray;
+      border-radius: 50%;
+      &.slick-active {
+        background-color: $basic-color-blue;
+      }
+      &--gray {
+        background-color: $basic-color-lgray;
+      }
+    }
+  }
   &--type-01 {
 
   }
